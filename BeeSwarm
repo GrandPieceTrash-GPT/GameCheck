@@ -1,0 +1,34 @@
+farmwebhook = true
+repeat wait()
+    print("Waiting game to load")
+until game:IsLoaded()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
+repeat wait(60)
+username = game:GetService("Players").LocalPlayer.Name
+pollen = game:GetService("Players").LocalPlayer.CoreStats.Pollen.value
+honey = game:GetService("Players").LocalPlayer.CoreStats.Honey.value
+local url = "https://discord.com/api/webhooks/904937939446951946/7CyKsdBWX4fANcoUUdzpZ8E1HBmYFnoRffPxWu8J087iAV-PYbKqefq3pUh7pohCtJe4"
+  local data = {
+  ["content"] = "---------------------------------\n@everyone",
+  
+   ["embeds"] = {
+       {
+           ["title"] = "Username :"..""..username,
+           ["description"] = "```".."currectly pollen : "..pollen.."\ncurrectly honey : "..honey.."\ncurrectly heath : "..game.Players.LocalPlayer.Character.Humanoid.Health.."```",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x16da),
+           ["image"] = {
+                    ["url"] = "https://tr.rbxcdn.com/a72a4f58392571630e2bed31163f7eac/768/432/Image/Png"
+                }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+until farmwebhook == false
