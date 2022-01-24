@@ -2,6 +2,7 @@ farmwebhook = true
 repeat wait()
     print("Waiting game to load")
 until game:IsLoaded()
+wait(5)
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/HopeFindViciousBee')))()
 repeat wait(60)
