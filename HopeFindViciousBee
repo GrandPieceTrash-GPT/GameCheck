@@ -1,0 +1,126 @@
+local Monsters = game:GetService("Workspace").Monsters
+if not Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or Monsters:FindFirstChild("Vicious Bee (Lvl 12)") or Monsters:FindFirstChild("Vicious Bee (Lvl 13)") or Monsters:FindFirstChild("Vicious Bee (Lvl 14)") or Monsters:FindFirstChild("Vicious Bee (Lvl 15)") then
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+end
+if Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or Monsters:FindFirstChild("Vicious Bee (Lvl 12)") or Monsters:FindFirstChild("Vicious Bee (Lvl 13)") or Monsters:FindFirstChild("Vicious Bee (Lvl 14)") or Monsters:FindFirstChild("Vicious Bee (Lvl 15)") then
+        -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ViciousBeeIsSpawn = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ViciousBeeIsSpawn.Name = "ViciousBeeIsSpawn"
+ViciousBeeIsSpawn.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ViciousBeeIsSpawn.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = ViciousBeeIsSpawn
+TextLabel.BackgroundColor3 = Color3.fromRGB(123, 255, 35)
+TextLabel.Position = UDim2.new(0.397969544, 0, 0.19880715, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Vicious Bee Is Spawn!!"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function RNTLM_fake_script() -- TextLabel.Rainbower 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	while wait() do
+		script.Parent.TextColor3 = Color3.new(1,0,0)
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g+(17/255),script.Parent.TextColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r-(17/255),script.Parent.TextColor3.g,script.Parent.TextColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g,script.Parent.TextColor3.b+(17/255))
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g-(17/255),script.Parent.TextColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r+(17/255),script.Parent.TextColor3.g,script.Parent.TextColor3.b)
+		end
+		for i=1,15 do
+			game:GetService("RunService").RenderStepped:wait()
+			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g,script.Parent.TextColor3.b-(17/255))
+		end
+	end
+end
+coroutine.wrap(RNTLM_fake_script)()
+end
