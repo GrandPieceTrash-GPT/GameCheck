@@ -3,10 +3,6 @@ print("Waiting Game To Load")
 until game:IsLoaded()
 wait(1)
 print("Start!")
- local message = Instance.new("Message", workspace)
-        message.Text = "This Is Beta Version May Have A Bug"
-        wait(4.5)
-        message:Destroy()
 -- Gui to Lua
 -- Version: 3.2
 
@@ -96,6 +92,10 @@ ServerHopTextButton.MouseButton1Click:Connect(function()
     end
     Teleport()
 end)
+ local message = Instance.new("Message", workspace)
+        message.Text = "This Is Beta Version May Have A Bug"
+        wait(4.5)
+        message:Destroy()
 local findhoneycomb = game:GetService("Players").LocalPlayer:FindFirstChild("Honeycomb")
 local Hive3 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive3")
 local Hive4 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive4")
