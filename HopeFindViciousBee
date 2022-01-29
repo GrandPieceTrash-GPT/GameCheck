@@ -6,54 +6,37 @@ local Hive6 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive6")
 local Hive7 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive7")
 local Hive8 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive8")
 local MyCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-if not findhoneycomb then
-if not Hive3 then
+
 local args = {
     [1] = 1
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
-if not findhoneycomb then
-if not Hive4 then
+wait(1)
 local args = {
     [1] = 2
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
-if not findhoneycomb then
-if not Hive5 then
+wait(1)
 local args = {
     [1] = 3
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
-if not findhoneycomb then
-if not Hive6 then
+wait(1)
 local args = {
     [1] = 4
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
-if not findhoneycomb then
-if not Hive7 then
+wait(1)
 local args = {
     [1] = 5
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
-if not findhoneycomb then
-if not Hive8 then
+wait(1)
 local args = {
     [1] = 6
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-end
-end
+wait(1)
 
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") then
 print("Vicious Bee (Lvl 1) Is Spawned!")
