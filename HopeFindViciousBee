@@ -48,6 +48,7 @@ print("Vicious Bee (Lvl 1) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 1) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") then
 print("Vicious Bee (Lvl 2) Is Spawned!")
@@ -55,6 +56,7 @@ print("Vicious Bee (Lvl 2) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 2) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") then
 print("Vicious Bee (Lvl 3) Is Spawned!")
@@ -62,6 +64,7 @@ print("Vicious Bee (Lvl 3) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 3) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") then
 print("Vicious Bee (Lvl 4) Is Spawned!")
@@ -76,6 +79,7 @@ print("Vicious Bee (Lvl 5) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 5) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") then
 print("Vicious Bee (Lvl 6) Is Spawned!")
@@ -83,6 +87,7 @@ print("Vicious Bee (Lvl 6) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 6) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") then
 print("Vicious Bee (Lvl 7) Is Spawned!")
@@ -90,6 +95,7 @@ print("Vicious Bee (Lvl 7) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 7) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") then
 print("Vicious Bee (Lvl 8) Is Spawned!")
@@ -97,6 +103,7 @@ print("Vicious Bee (Lvl 8) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 8) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") then
 print("Vicious Bee (Lvl 9) Is Spawned!")
@@ -104,6 +111,7 @@ print("Vicious Bee (Lvl 9) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 9) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") then
 print("Vicious Bee (Lvl 10) Is Spawned!")
@@ -111,6 +119,7 @@ print("Vicious Bee (Lvl 10) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 10) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") then
 print("Vicious Bee (Lvl 11) Is Spawned!")
@@ -118,6 +127,7 @@ print("Vicious Bee (Lvl 11) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 11) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
 print("Vicious Bee (Lvl 12) Is Spawned!")
@@ -125,6 +135,7 @@ print("Vicious Bee (Lvl 12) Is Spawned!")
         message.Text = "Vicious Bee (Lvl 12) Is Spawned!"
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
 end
 serverhop = true
 repeat wait(1)
@@ -133,6 +144,7 @@ if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)
         message.Text = "Vicious Bee Isn't Spawn Hopping Server..."
         wait(4.5)
         message:Destroy()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/GrandPieceTrash-GPT/GameCheck/main/BeeSwarm')))()
         local PlaceID = game.PlaceId
     local AllIDs = {}
     local foundAnything = ""
