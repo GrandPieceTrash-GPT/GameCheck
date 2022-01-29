@@ -10,7 +10,7 @@ local username
 local tag
 local info = {}
 local PresetColor = Color3.fromRGB(0, 128, 255) or _G.UI_Color
-local logo = 8497547113
+local logo = 8582842874
 
 if game:GetService("CoreGui"):FindFirstChild("Nova") then
 	game:GetService("CoreGui"):FindFirstChild("Nova"):Destroy()
@@ -392,8 +392,8 @@ function StrikeCourse:Window(text,maincolor)
    UserTag.TextTransparency = 0
    UserTag.TextXAlignment = Enum.TextXAlignment.Left
 
-   UserName.Text = "Nova Hub"
-   UserTag.Text = "#" .. " Nova Hub"]]
+   UserName.Text = "Padoru Hub"
+   UserTag.Text = "#" .. " Padoru Hub"]]
 
    ServersHoldFrame.Name = "ServersHoldFrame"
    ServersHoldFrame.Parent = MainFrame
