@@ -702,5 +702,6 @@ wait(.1)
     end
     Teleport()
 wait(.1)
-until hopserver == false
 end
+until hopserver == false
+
