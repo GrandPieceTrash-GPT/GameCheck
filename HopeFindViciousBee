@@ -1,5 +1,163 @@
-local Monsters = game:GetService("Workspace").Monsters
-if not Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or Monsters:FindFirstChild("Vicious Bee (Lvl 12)") or Monsters:FindFirstChild("Vicious Bee (Lvl 13)") or Monsters:FindFirstChild("Vicious Bee (Lvl 14)") or Monsters:FindFirstChild("Vicious Bee (Lvl 15)") then
+local findhoneycomb = game:GetService("Players").LocalPlayer:FindFirstChild("Honeycomb")
+local Hive3 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive3")
+local Hive4 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive4")
+local Hive5 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive5")
+local Hive6 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive6")
+local Hive7 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive7")
+local Hive8 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive8")
+local MyCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+if not findhoneycomb then
+if not Hive3 then
+local args = {
+    [1] = 1
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+if not findhoneycomb then
+if not Hive4 then
+local args = {
+    [1] = 2
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+if not findhoneycomb then
+if not Hive5 then
+local args = {
+    [1] = 3
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+if not findhoneycomb then
+if not Hive6 then
+local args = {
+    [1] = 4
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+if not findhoneycomb then
+if not Hive7 then
+local args = {
+    [1] = 5
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+if not findhoneycomb then
+if not Hive8 then
+local args = {
+    [1] = 6
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+end
+end
+
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") then
+print("Vicious Bee (Lvl 1) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 1) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") then
+print("Vicious Bee (Lvl 2) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 2) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") then
+print("Vicious Bee (Lvl 3) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 3) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") then
+print("Vicious Bee (Lvl 4) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 4) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") then
+print("Vicious Bee (Lvl 5) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 5) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") then
+print("Vicious Bee (Lvl 6) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 6) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") then
+print("Vicious Bee (Lvl 7) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 7) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") then
+print("Vicious Bee (Lvl 8) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 8) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") then
+print("Vicious Bee (Lvl 9) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 9) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") then
+print("Vicious Bee (Lvl 10) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 10) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") then
+print("Vicious Bee (Lvl 11) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 11) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)").Head.CFrame)
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
+print("Vicious Bee (Lvl 12) Is Spawned!")
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee (Lvl 12) Is Spawned!"
+        wait(4.5)
+        message:Destroy()
+MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)").Head.CFrame)
+end
+if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
+ local message = Instance.new("Message", workspace)
+        message.Text = "Vicious Bee Isn't Spawn Hopping Server..."
+        wait(4.5)
+        message:Destroy()
+serverhop = true
+repeat wait()
         local PlaceID = game.PlaceId
     local AllIDs = {}
     local foundAnything = ""
@@ -61,66 +219,502 @@ if not Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or Monsters:FindFirstChild
         end
     end
     Teleport()
-end
-if Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or Monsters:FindFirstChild("Vicious Bee (Lvl 12)") or Monsters:FindFirstChild("Vicious Bee (Lvl 13)") or Monsters:FindFirstChild("Vicious Bee (Lvl 14)") or Monsters:FindFirstChild("Vicious Bee (Lvl 15)") then
-        -- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ViciousBeeIsSpawn = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ViciousBeeIsSpawn.Name = "ViciousBeeIsSpawn"
-ViciousBeeIsSpawn.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ViciousBeeIsSpawn.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-TextLabel.Parent = ViciousBeeIsSpawn
-TextLabel.BackgroundColor3 = Color3.fromRGB(123, 255, 35)
-TextLabel.Position = UDim2.new(0.397969544, 0, 0.19880715, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Vicious Bee Is Spawn!!"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextStrokeTransparency = 0.000
-TextLabel.TextWrapped = true
-
--- Scripts:
-
-local function RNTLM_fake_script() -- TextLabel.Rainbower 
-	local script = Instance.new('LocalScript', TextLabel)
-
-	while wait() do
-		script.Parent.TextColor3 = Color3.new(1,0,0)
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g+(17/255),script.Parent.TextColor3.b)
-		end
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r-(17/255),script.Parent.TextColor3.g,script.Parent.TextColor3.b)
-		end
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g,script.Parent.TextColor3.b+(17/255))
-		end
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g-(17/255),script.Parent.TextColor3.b)
-		end
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r+(17/255),script.Parent.TextColor3.g,script.Parent.TextColor3.b)
-		end
-		for i=1,15 do
-			game:GetService("RunService").RenderStepped:wait()
-			script.Parent.TextColor3 = Color3.new(script.Parent.TextColor3.r,script.Parent.TextColor3.g,script.Parent.TextColor3.b-(17/255))
-		end
-	end
-end
-coroutine.wrap(RNTLM_fake_script)()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+        local PlaceID = game.PlaceId
+    local AllIDs = {}
+    local foundAnything = ""
+    local actualHour = os.date("!*t").hour
+    local Deleted = false
+    function TPReturner()
+        local Site;
+        if foundAnything == "" then
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+        else
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+        end
+        local ID = ""
+        if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+            foundAnything = Site.nextPageCursor
+        end
+        local num = 0;
+        for i,v in pairs(Site.data) do
+            local Possible = true
+            ID = tostring(v.id)
+            if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                for _,Existing in pairs(AllIDs) do
+                    if num ~= 0 then
+                        if ID == tostring(Existing) then
+                            Possible = false
+                        end
+                    else
+                        if tonumber(actualHour) ~= tonumber(Existing) then
+                            local delFile = pcall(function()
+                                -- delfile("NotSameServers.json")
+                                AllIDs = {}
+                                table.insert(AllIDs, actualHour)
+                            end)
+                        end
+                    end
+                    num = num + 1
+                end
+                if Possible == true then
+                    table.insert(AllIDs, ID)
+                    wait()
+                    pcall(function()
+                        -- writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                        wait()
+                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                    end)
+                    wait(.1)
+                end
+            end
+        end
+    end
+    function Teleport() 
+        while wait() do
+            pcall(function()
+                TPReturner()
+                if foundAnything ~= "" then
+                    TPReturner()
+                end
+            end)
+        end
+    end
+    Teleport()
+wait(.1)
+until hopserver == false
 end
