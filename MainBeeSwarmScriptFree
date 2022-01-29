@@ -1,46 +1,6 @@
 repeat wait()
 print("Waiting Game To Load")
 until game:IsLoaded()
-farmwebhook = true
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
-repeat wait(60)
-username = game:GetService("Players").LocalPlayer.Name
-pollen = game:GetService("Players").LocalPlayer.CoreStats.Pollen.value
-honey = game:GetService("Players").LocalPlayer.CoreStats.Honey.value
-capacity = game:GetService("Players").LocalPlayer.CoreStats.Capacity.value
-TimeDate = os.date("%Y").."/"..os.date("%m").."/"..os.date("%d").." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S")
-ViciousBee = ""
-if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
-ViciousBee = "not Spawn!"
-end
-if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
-ViciousBee = " Spawn!"
-end
-local url = "https://discord.com/api/webhooks/904937939446951946/7CyKsdBWX4fANcoUUdzpZ8E1HBmYFnoRffPxWu8J087iAV-PYbKqefq3pUh7pohCtJe4"
-  local data = {
-  ["content"] = "---------------------------------\n@everyone",
-  
-   ["embeds"] = {
-       {
-           ["title"] = "Username :"..""..username,
-           ["description"] = "```".."LocalPlayer \n----------------------------------- \ncurrectly pollen : "..pollen.."\ncurrectly honey : "..honey.."\ncurrectly capacity : "..capacity.."\ncurrectly heath : "..game.Players.LocalPlayer.Character.Humanoid.Health.."\n-----------------------------------".."\nServer".."\nVicious Bee is"..ViciousBee.."```".."\nCurrectly Time : "..TimeDate,
-           ["type"] = "rich",
-           ["color"] = tonumber(0x16da),
-           ["image"] = {
-                    ["url"] = "https://tr.rbxcdn.com/a72a4f58392571630e2bed31163f7eac/768/432/Image/Png"
-                }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-until farmwebhook == false
 wait(1)
 print("Wait(1)")
 wait(1)
@@ -773,3 +733,43 @@ wait(.1)
 wait(.1)
 end
 until hopserver == false
+farmwebhook = true
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
+repeat wait(60)
+username = game:GetService("Players").LocalPlayer.Name
+pollen = game:GetService("Players").LocalPlayer.CoreStats.Pollen.value
+honey = game:GetService("Players").LocalPlayer.CoreStats.Honey.value
+capacity = game:GetService("Players").LocalPlayer.CoreStats.Capacity.value
+TimeDate = os.date("%Y").."/"..os.date("%m").."/"..os.date("%d").." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S")
+ViciousBee = ""
+if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
+ViciousBee = "not Spawn!"
+end
+if game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
+ViciousBee = " Spawn!"
+end
+local url = "https://discord.com/api/webhooks/904937939446951946/7CyKsdBWX4fANcoUUdzpZ8E1HBmYFnoRffPxWu8J087iAV-PYbKqefq3pUh7pohCtJe4"
+  local data = {
+  ["content"] = "---------------------------------\n@everyone",
+  
+   ["embeds"] = {
+       {
+           ["title"] = "Username :"..""..username,
+           ["description"] = "```".."LocalPlayer \n----------------------------------- \ncurrectly pollen : "..pollen.."\ncurrectly honey : "..honey.."\ncurrectly capacity : "..capacity.."\ncurrectly heath : "..game.Players.LocalPlayer.Character.Humanoid.Health.."\n-----------------------------------".."\nServer".."\nVicious Bee is"..ViciousBee.."```".."\nCurrectly Time : "..TimeDate,
+           ["type"] = "rich",
+           ["color"] = tonumber(0x16da),
+           ["image"] = {
+                    ["url"] = "https://tr.rbxcdn.com/a72a4f58392571630e2bed31163f7eac/768/432/Image/Png"
+                }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+until farmwebhook == false
