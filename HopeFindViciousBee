@@ -13,22 +13,7 @@ local Hive8 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive8")
 local MyCFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 
 local args = {
-    [1] = 1
-}
-game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-wait(0.2)
-local args = {
-    [1] = 2
-}
-game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-wait(0.2)
-local args = {
-    [1] = 3
-}
-game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
-wait(0.2)
-local args = {
-    [1] = 4
+    [1] = 6
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
 wait(0.2)
@@ -38,7 +23,22 @@ local args = {
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
 wait(0.2)
 local args = {
-    [1] = 6
+    [1] = 4
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+wait(0.2)
+local args = {
+    [1] = 3
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+wait(0.2)
+local args = {
+    [1] = 2
+}
+game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
+wait(0.2)
+local args = {
+    [1] = 1
 }
 game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(unpack(args))
 
