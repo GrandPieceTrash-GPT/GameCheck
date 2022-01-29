@@ -1,7 +1,7 @@
 repeat wait()
 print("Waiting Game To Load")
 until game:IsLoaded()
-wait(10)
+wait(15)
 local findhoneycomb = game:GetService("Players").LocalPlayer:FindFirstChild("Honeycomb")
 local Hive3 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive3")
 local Hive4 = game:GetService("Workspace").Honeycombs:FindFirstChild("Hive4")
