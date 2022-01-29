@@ -134,13 +134,13 @@ print("Vicious Bee (Lvl 12) Is Spawned!")
         message:Destroy()
 MyCFrame = CFrame.new(game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)").Head.CFrame)
 end
+serverhop = true
+repeat wait()
 if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
  local message = Instance.new("Message", workspace)
         message.Text = "Vicious Bee Isn't Spawn Hopping Server..."
         wait(4.5)
         message:Destroy()
-serverhop = true
-repeat wait()
         local PlaceID = game.PlaceId
     local AllIDs = {}
     local foundAnything = ""
