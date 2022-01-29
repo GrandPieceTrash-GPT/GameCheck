@@ -8,7 +8,7 @@ username = game:GetService("Players").LocalPlayer.Name
 pollen = game:GetService("Players").LocalPlayer.CoreStats.Pollen.value
 honey = game:GetService("Players").LocalPlayer.CoreStats.Honey.value
 capacity = game:GetService("Players").LocalPlayer.CoreStats.Capacity.value
-TimeDate = os.date("%Y").."/"..os.date("%m").."/"..os.date("%d").." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S")
+TimeDate = os.date("%Y").."/"..os.date("%m").."/"..os.date("%d").." "..os.date("%H")..":"..os.date("%M")..":"..os.date("%S").."**"
 ViciousBee = ""
 if not game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 1)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 2)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 3)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 4)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 5)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 6)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 7)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 8)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 9)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 10)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 11)") or game:GetService("Workspace").Monsters:FindFirstChild("Vicious Bee (Lvl 12)") then
 ViciousBee = " not Spawn!"
@@ -23,7 +23,7 @@ local url = "https://discord.com/api/webhooks/904937939446951946/7CyKsdBWX4fANco
    ["embeds"] = {
        {
            ["title"] = "Username :"..""..username,
-           ["description"] = "```".."LocalPlayer \n----------------------------------- \ncurrectly pollen : "..pollen.."\ncurrectly honey : "..honey.."\ncurrectly capacity : "..capacity.."\ncurrectly heath : "..game.Players.LocalPlayer.Character.Humanoid.Health.."\n-----------------------------------".."\nServer".."\nVicious Bee is"..ViciousBee.."```".."\nCurrectly Time : "..TimeDate,
+           ["description"] = "```".."LocalPlayer \n----------------------------------- \ncurrectly pollen : "..pollen.."\ncurrectly honey : "..honey.."\ncurrectly capacity : "..capacity.."\ncurrectly heath : "..game.Players.LocalPlayer.Character.Humanoid.Health.."\n-----------------------------------".."\nServer".."\n-----------------------------------".."\nVicious Bee is"..ViciousBee.."```".."\n**Currectly Time : "..TimeDate,
            ["type"] = "rich",
            ["color"] = tonumber(0x16da),
            ["image"] = {
