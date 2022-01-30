@@ -1,6 +1,12 @@
+repeat wait()
+print("Waiting For Game To Load")
+until game:IsLoaded()
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("WebHookSendGui") then
    game.Players.LocalPlayer.PlayerGui.WebHookSendGui:Destroy()
 end
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
+
 -- Gui to Lua
 -- Version: 3.2
 
