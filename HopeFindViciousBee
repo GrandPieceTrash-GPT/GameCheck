@@ -795,6 +795,6 @@ wait(.1)
     end
     Teleport()
 wait(.1)
-end
 until hopserver == false
+end
 
