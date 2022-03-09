@@ -1,3 +1,7 @@
+repeat wait(1)
+print("Waiting For Game To Load")
+until game:IsLoaded()
+if game.PlaceId == 7449423635 then
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP") then
     game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP"):Destroy()
 end
@@ -243,3 +247,4 @@ OnButton.MouseButton1Click:Connect(function()
     BackGroudFrame.Visible = not BackGroudFrame.Visible
     OnButton.Visible = not OnButton.Visible
 end)
+end
