@@ -1,7 +1,464 @@
 repeat wait(1)
 print("Waiting For Game To Load")
 until game:IsLoaded()
-if game.PlaceId == 7449423635 then
+wait(.1)
+if game.PlaceId == 4442272183 then
+    wait(.1)
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP") then
+    game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP"):Destroy()
+end
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local GuiTP = Instance.new("ScreenGui")
+local BackGroudFrame = Instance.new("Frame")
+local ButtonFrame1 = Instance.new("TextButton")
+local ButtonFrame2 = Instance.new("TextButton")
+local XButton = Instance.new("TextButton")
+local UnButton = Instance.new("TextButton")
+local LineFrame = Instance.new("Frame")
+local HeadFrame = Instance.new("TextLabel")
+local MoreButton = Instance.new("TextButton")
+local OnButton = Instance.new("TextButton")
+local BackGroudFrame2 = Instance.new("Frame")
+local LineFrame2 = Instance.new("Frame")
+local HeadText2 = Instance.new("TextLabel")
+local XButton2 = Instance.new("TextButton")
+local OffButton3 = Instance.new("TextButton")
+local OnButton3 = Instance.new("TextButton")
+local FarHitButton = Instance.new("TextButton")
+
+--Properties:
+
+GuiTP.Name = "GuiTP"
+GuiTP.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GuiTP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BackGroudFrame.Name = "BackGroudFrame"
+BackGroudFrame.Parent = GuiTP
+BackGroudFrame.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
+BackGroudFrame.Position = UDim2.new(0.513686121, 0, 0.220675945, 0)
+BackGroudFrame.Size = UDim2.new(0, 200, 0, 300)
+
+ButtonFrame1.Name = "ButtonFrame1"
+ButtonFrame1.Parent = BackGroudFrame
+ButtonFrame1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+ButtonFrame1.Position = UDim2.new(0.0450000018, 0, 0.150000006, 0)
+ButtonFrame1.Size = UDim2.new(0, 182, 0, 50)
+ButtonFrame1.Font = Enum.Font.SourceSans
+ButtonFrame1.Text = "Mansion"
+ButtonFrame1.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame1.TextScaled = true
+ButtonFrame1.TextSize = 14.000
+ButtonFrame1.TextWrapped = true
+
+ButtonFrame2.Name = "ButtonFrame2"
+ButtonFrame2.Parent = BackGroudFrame
+ButtonFrame2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+ButtonFrame2.Position = UDim2.new(0.0450000018, 0, 0.353333354, 0)
+ButtonFrame2.Size = UDim2.new(0, 182, 0, 50)
+ButtonFrame2.Font = Enum.Font.SourceSans
+ButtonFrame2.Text = "Cursed Ship"
+ButtonFrame2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame2.TextScaled = true
+ButtonFrame2.TextSize = 14.000
+ButtonFrame2.TextWrapped = true
+
+XButton.Name = "XButton"
+XButton.Parent = BackGroudFrame
+XButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+XButton.Position = UDim2.new(0.900000036, 0, 0.00999999791, 0)
+XButton.Size = UDim2.new(0, 20, 0, 20)
+XButton.Font = Enum.Font.SourceSans
+XButton.Text = "X"
+XButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+XButton.TextScaled = true
+XButton.TextSize = 14.000
+XButton.TextWrapped = true
+
+UnButton.Name = "UnButton"
+UnButton.Parent = BackGroudFrame
+UnButton.BackgroundColor3 = Color3.fromRGB(130, 130, 130)
+UnButton.Position = UDim2.new(-4.47034836e-08, 0, 0.00999999978, 0)
+UnButton.Size = UDim2.new(0, 20, 0, 20)
+UnButton.Font = Enum.Font.SourceSans
+UnButton.Text = "-"
+UnButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+UnButton.TextScaled = true
+UnButton.TextSize = 14.000
+UnButton.TextWrapped = true
+
+LineFrame.Name = "LineFrame"
+LineFrame.Parent = BackGroudFrame
+LineFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LineFrame.Position = UDim2.new(-0.00131386518, 0, 0.0916633308, 0)
+LineFrame.Size = UDim2.new(0, 200, 0, 0)
+
+HeadFrame.Name = "HeadFrame"
+HeadFrame.Parent = BackGroudFrame
+HeadFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HeadFrame.BackgroundTransparency = 1.000
+HeadFrame.Position = UDim2.new(-0.00131380558, 0, -0.00330018252, 0)
+HeadFrame.Size = UDim2.new(0, 200, 0, 30)
+HeadFrame.Font = Enum.Font.SourceSans
+HeadFrame.Text = "Teleport"
+HeadFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
+HeadFrame.TextScaled = true
+HeadFrame.TextSize = 14.000
+HeadFrame.TextWrapped = true
+
+MoreButton.Name = "MoreButton"
+MoreButton.Parent = BackGroudFrame
+MoreButton.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+MoreButton.Position = UDim2.new(0.75, 0, 1, 0)
+MoreButton.Size = UDim2.new(0, 50, 0, 50)
+MoreButton.Font = Enum.Font.SourceSans
+MoreButton.Text = "More"
+MoreButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+MoreButton.TextScaled = true
+MoreButton.TextSize = 14.000
+MoreButton.TextWrapped = true
+
+OnButton.Name = "OnButton"
+OnButton.Parent = GuiTP
+OnButton.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+OnButton.Position = UDim2.new(0.927007377, 0, 0.236580536, 0)
+OnButton.Size = UDim2.new(0, 40, 0, 40)
+OnButton.Visible = false
+OnButton.Font = Enum.Font.SourceSans
+OnButton.Text = "+"
+OnButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+OnButton.TextScaled = true
+OnButton.TextSize = 14.000
+OnButton.TextWrapped = true
+
+BackGroudFrame2.Name = "BackGroudFrame2"
+BackGroudFrame2.Parent = GuiTP
+BackGroudFrame2.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+BackGroudFrame2.Position = UDim2.new(0.329379559, 0, 0.432862192, 0)
+BackGroudFrame2.Size = UDim2.new(0, 150, 0, 200)
+BackGroudFrame2.Visible = false
+
+LineFrame2.Name = "LineFrame2"
+LineFrame2.Parent = BackGroudFrame2
+LineFrame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LineFrame2.Position = UDim2.new(0, 0, 0.200000003, 0)
+LineFrame2.Size = UDim2.new(0, 150, 0, 0)
+
+HeadText2.Name = "HeadText2"
+HeadText2.Parent = BackGroudFrame2
+HeadText2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HeadText2.BackgroundTransparency = 1.000
+HeadText2.Size = UDim2.new(0, 150, 0, 30)
+HeadText2.Font = Enum.Font.SourceSans
+HeadText2.Text = "More"
+HeadText2.TextColor3 = Color3.fromRGB(0, 0, 0)
+HeadText2.TextScaled = true
+HeadText2.TextSize = 14.000
+HeadText2.TextWrapped = true
+
+XButton2.Name = "XButton2"
+XButton2.Parent = BackGroudFrame2
+XButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+XButton2.Position = UDim2.new(0.866666675, 0, 0.0333333351, 0)
+XButton2.Size = UDim2.new(0, 20, 0, 20)
+XButton2.Font = Enum.Font.SourceSans
+XButton2.Text = "X"
+XButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+XButton2.TextScaled = true
+XButton2.TextSize = 14.000
+XButton2.TextWrapped = true
+
+OffButton3.Name = "OffButton3"
+OffButton3.Parent = BackGroudFrame2
+OffButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+OffButton3.Position = UDim2.new(0.0533333346, 0, 0.25333333, 0)
+OffButton3.Size = UDim2.new(0, 134, 0, 40)
+OffButton3.Font = Enum.Font.SourceSans
+OffButton3.Text = "Fast Attack"
+OffButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+OffButton3.TextScaled = true
+OffButton3.TextSize = 14.000
+OffButton3.TextWrapped = true
+
+OnButton3.Name = "OnButton3"
+OnButton3.Parent = BackGroudFrame2
+OnButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+OnButton3.Position = UDim2.new(0.0533333346, 0, 0.502683878, 0)
+OnButton3.Size = UDim2.new(0, 134, 0, 41)
+OnButton3.Font = Enum.Font.SourceSans
+OnButton3.Text = "Auto Attack"
+OnButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+OnButton3.TextScaled = true
+OnButton3.TextSize = 14.000
+OnButton3.TextWrapped = true
+
+FarHitButton.Name = "FarHitButton"
+FarHitButton.Parent = BackGroudFrame2
+FarHitButton.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+FarHitButton.Position = UDim2.new(0.0533333346, 0, 0.763333321, 0)
+FarHitButton.Size = UDim2.new(0, 134, 0, 40)
+FarHitButton.Font = Enum.Font.SourceSans
+FarHitButton.Text = "Far Attack(Open With Fast Attack)"
+FarHitButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+FarHitButton.TextScaled = true
+FarHitButton.TextSize = 14.000
+FarHitButton.TextWrapped = true
+
+-- Scripts:
+
+local function TWUYDJ_fake_script() -- BackGroudFrame.Dragscript1 
+	local script = Instance.new('LocalScript', BackGroudFrame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(TWUYDJ_fake_script)()
+local function OGKLN_fake_script() -- OnButton.Drag Script 2 
+	local script = Instance.new('LocalScript', OnButton)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(OGKLN_fake_script)()
+local function WUSBASV_fake_script() -- BackGroudFrame2.Drag Script 3 
+	local script = Instance.new('LocalScript', BackGroudFrame2)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(WUSBASV_fake_script)()
+
+--Main
+_G.FastAttack = false
+_G.AutoAttack = false
+ButtonFrame1.MouseButton1Click:Connect(function()
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-282.9456481933594, 373.4862976074219, 591.9107055664062))
+end)
+ButtonFrame2.MouseButton1Click:Connect(function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.2125244140625, 126.97600555419922, 32852.83203125))
+end)
+UnButton.MouseButton1Click:Connect(function()
+    BackGroudFrame.Visible = not BackGroudFrame.Visible
+    OnButton.Visible = not OnButton.Visible
+end)
+OnButton.MouseButton1Click:Connect(function()
+    BackGroudFrame.Visible = not BackGroudFrame.Visible
+    OnButton.Visible = not OnButton.Visible
+end)
+MoreButton.MouseButton1Click:Connect(function()
+    BackGroudFrame2.Visible = not BackGroudFrame2.Visible
+end)
+XButton2.MouseButton1Click:Connect(function()
+    BackGroudFrame2.Visible = not BackGroudFrame2.Visible
+end)
+OffButton3.MouseButton1Click:Connect(function()
+    _G.FastAttack = not _G.FastAttack
+end)
+OnButton3.MouseButton1Click:Connect(function()
+    _G.AutoAttack = not _G.AutoAttack
+end)
+OnButton3.MouseButton1Click:Connect(function()
+    _G.FarHit = not _G.FarHit
+end)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FarHit then
+require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FarHit then
+require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FarHit then
+require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FastAttack then
+            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
+            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
+            Combat.activeController.timeToNextAttack = 0
+            Combat.activeController.hitboxMagnitude = 120
+            Combat.activeController.increment = 3
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FastAttack then
+            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
+            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
+            Combat.activeController.timeToNextAttack = 0
+            Combat.activeController.hitboxMagnitude = 120
+            Combat.activeController.increment = 3
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.FastAttack then
+            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
+            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
+            Combat.activeController.timeToNextAttack = 0
+            Combat.activeController.hitboxMagnitude = 120
+            Combat.activeController.increment = 3
+        end
+    end)
+end) 
+end)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.AutoAttack then
+            game:GetService'VirtualUser':CaptureController()
+            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+        end
+    end)
+end) 
+end)
+wait(.1)
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+        if _G.AutoAttack then
+            game:GetService'VirtualUser':CaptureController()
+            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+        end
+    end)
+end) 
+end)
+wait(.1)
+end
+elsif game.PlaceId == 7449423635 then
 wait(.1)
 spawn(function()
    game:GetService("RunService").RenderStepped:Connect(function()
@@ -281,4 +738,3 @@ OnButton.MouseButton1Click:Connect(function()
     BackGroudFrame.Visible = not BackGroudFrame.Visible
     OnButton.Visible = not OnButton.Visible
 end)
-end
