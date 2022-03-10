@@ -7,6 +7,25 @@ if game.PlaceId == 4442272183 then
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP") then
     game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP"):Destroy()
 end
+
+function TP(P1)
+    Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 250 then
+        Speed = 600
+    elseif Distance < 500 then
+        Speed = 400
+    elseif Distance < 1000 then
+        Speed = 350
+    elseif Distance >= 1000 then
+        Speed = 200
+    end
+    game:GetService("TweenService"):Create(
+        game.Players.LocalPlayer.Character.HumanoidRootPart,
+        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+        {CFrame = P1}
+    ):Play()
+end
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -112,7 +131,7 @@ HeadFrame.TextWrapped = true
 MoreButton.Name = "MoreButton"
 MoreButton.Parent = BackGroudFrame
 MoreButton.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
-MoreButton.Position = UDim2.new(0.75, 0, 1, 0)
+MoreButton.Position = UDim2.new(1, 0, 0, 0)
 MoreButton.Size = UDim2.new(0, 50, 0, 50)
 MoreButton.Font = Enum.Font.SourceSans
 MoreButton.Text = "More"
@@ -137,7 +156,7 @@ OnButton.TextWrapped = true
 BackGroudFrame2.Name = "BackGroudFrame2"
 BackGroudFrame2.Parent = GuiTP
 BackGroudFrame2.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
-BackGroudFrame2.Position = UDim2.new(0.329379559, 0, 0.432862192, 0)
+BackGroudFrame2.Position = UDim2.new(0.791970789, 0, 0.19826974, 0)
 BackGroudFrame2.Size = UDim2.new(0, 150, 0, 200)
 BackGroudFrame2.Visible = false
 
@@ -151,6 +170,7 @@ HeadText2.Name = "HeadText2"
 HeadText2.Parent = BackGroudFrame2
 HeadText2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HeadText2.BackgroundTransparency = 1.000
+HeadText2.Position = UDim2.new(0, 0, 0.00499999989, 0)
 HeadText2.Size = UDim2.new(0, 150, 0, 30)
 HeadText2.Font = Enum.Font.SourceSans
 HeadText2.Text = "More"
@@ -201,12 +221,14 @@ FarHitButton.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 FarHitButton.Position = UDim2.new(0.0533333346, 0, 0.763333321, 0)
 FarHitButton.Size = UDim2.new(0, 134, 0, 40)
 FarHitButton.Font = Enum.Font.SourceSans
-FarHitButton.Text = "Far Attack(Open With Fast Attack)"
+FarHitButton.Text = "Far Attack"
 FarHitButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 FarHitButton.TextScaled = true
 FarHitButton.TextSize = 14.000
 FarHitButton.TextWrapped = true
 
+local Plr = game.Players.LocalPlayer
+ 
 -- Scripts:
 
 local function TWUYDJ_fake_script() -- BackGroudFrame.Dragscript1 
@@ -326,6 +348,7 @@ local function WUSBASV_fake_script() -- BackGroudFrame2.Drag Script 3
 	end)
 end
 coroutine.wrap(WUSBASV_fake_script)()
+
 
 --Main
 _G.FastAttack = false
@@ -468,15 +491,29 @@ end
 
 local GuiTP = Instance.new("ScreenGui")
 local BackGroudFrame = Instance.new("Frame")
-local ButtonFrame1 = Instance.new("TextButton")
-local ButtonFrame2 = Instance.new("TextButton")
-local ButtonFrame4 = Instance.new("TextButton")
-local ButtonFrame3 = Instance.new("TextButton")
 local XButton = Instance.new("TextButton")
 local UnButton = Instance.new("TextButton")
 local LineFrame = Instance.new("Frame")
 local HeadFrame = Instance.new("TextLabel")
+local MoreButton = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local ButtonFrame1 = Instance.new("TextButton")
+local ButtonFrame2 = Instance.new("TextButton")
+local ButtonFrame3 = Instance.new("TextButton")
+local ButtonFrame4 = Instance.new("TextButton")
+local ButtonFrame5 = Instance.new("TextButton")
+local ButtonFrame6 = Instance.new("TextButton")
+local ButtonFrame7 = Instance.new("TextButton")
+local ButtonFrame8 = Instance.new("TextButton")
+local ButtonFrame9 = Instance.new("TextButton")
 local OnButton = Instance.new("TextButton")
+local BackGroudFrame2 = Instance.new("Frame")
+local LineFrame2 = Instance.new("Frame")
+local HeadText2 = Instance.new("TextLabel")
+local XButton2 = Instance.new("TextButton")
+local OffButton3 = Instance.new("TextButton")
+local OnButton3 = Instance.new("TextButton")
+local FarHitButton = Instance.new("TextButton")
 
 --Properties:
 
@@ -487,56 +524,8 @@ GuiTP.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BackGroudFrame.Name = "BackGroudFrame"
 BackGroudFrame.Parent = GuiTP
 BackGroudFrame.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
-BackGroudFrame.Position = UDim2.new(0.513686121, 0, 0.220675945, 0)
+BackGroudFrame.Position = UDim2.new(0.538321137, 0, 0.200795233, 0)
 BackGroudFrame.Size = UDim2.new(0, 200, 0, 300)
-
-ButtonFrame1.Name = "ButtonFrame1"
-ButtonFrame1.Parent = BackGroudFrame
-ButtonFrame1.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-ButtonFrame1.Position = UDim2.new(0.0450000018, 0, 0.150000006, 0)
-ButtonFrame1.Size = UDim2.new(0, 182, 0, 50)
-ButtonFrame1.Font = Enum.Font.SourceSans
-ButtonFrame1.Text = "Castle On The Sea"
-ButtonFrame1.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonFrame1.TextScaled = true
-ButtonFrame1.TextSize = 14.000
-ButtonFrame1.TextWrapped = true
-
-ButtonFrame2.Name = "ButtonFrame2"
-ButtonFrame2.Parent = BackGroudFrame
-ButtonFrame2.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-ButtonFrame2.Position = UDim2.new(0.0450000018, 0, 0.353333354, 0)
-ButtonFrame2.Size = UDim2.new(0, 182, 0, 50)
-ButtonFrame2.Font = Enum.Font.SourceSans
-ButtonFrame2.Text = "Mansion"
-ButtonFrame2.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonFrame2.TextScaled = true
-ButtonFrame2.TextSize = 14.000
-ButtonFrame2.TextWrapped = true
-
-ButtonFrame4.Name = "ButtonFrame4"
-ButtonFrame4.Parent = BackGroudFrame
-ButtonFrame4.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-ButtonFrame4.Position = UDim2.new(0.0450000018, 0, 0.783333302, 0)
-ButtonFrame4.Size = UDim2.new(0, 182, 0, 50)
-ButtonFrame4.Font = Enum.Font.SourceSans
-ButtonFrame4.Text = "Beautiful Pirate"
-ButtonFrame4.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonFrame4.TextScaled = true
-ButtonFrame4.TextSize = 14.000
-ButtonFrame4.TextWrapped = true
-
-ButtonFrame3.Name = "ButtonFrame3"
-ButtonFrame3.Parent = BackGroudFrame
-ButtonFrame3.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
-ButtonFrame3.Position = UDim2.new(0.0450000018, 0, 0.569999993, 0)
-ButtonFrame3.Size = UDim2.new(0, 182, 0, 50)
-ButtonFrame3.Font = Enum.Font.SourceSans
-ButtonFrame3.Text = "Hydra Island"
-ButtonFrame3.TextColor3 = Color3.fromRGB(0, 0, 0)
-ButtonFrame3.TextScaled = true
-ButtonFrame3.TextSize = 14.000
-ButtonFrame3.TextWrapped = true
 
 XButton.Name = "XButton"
 XButton.Parent = BackGroudFrame
@@ -581,6 +570,134 @@ HeadFrame.TextScaled = true
 HeadFrame.TextSize = 14.000
 HeadFrame.TextWrapped = true
 
+MoreButton.Name = "MoreButton"
+MoreButton.Parent = BackGroudFrame
+MoreButton.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+MoreButton.Position = UDim2.new(1, 0, 0, 0)
+MoreButton.Size = UDim2.new(0, 50, 0, 50)
+MoreButton.Font = Enum.Font.SourceSans
+MoreButton.Text = "More"
+MoreButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+MoreButton.TextScaled = true
+MoreButton.TextSize = 14.000
+MoreButton.TextWrapped = true
+
+ScrollingFrame.Parent = BackGroudFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0, 0, 0.0966666639, 0)
+ScrollingFrame.Size = UDim2.new(0, 199, 0, 271)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 329)
+
+ButtonFrame1.Name = "ButtonFrame1"
+ButtonFrame1.Parent = ScrollingFrame
+ButtonFrame1.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame1.Position = UDim2.new(0.0452261306, 0, 0.0220499076, 0)
+ButtonFrame1.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame1.Font = Enum.Font.SourceSans
+ButtonFrame1.Text = "Castle On The Sea"
+ButtonFrame1.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame1.TextScaled = true
+ButtonFrame1.TextSize = 14.000
+ButtonFrame1.TextWrapped = true
+
+ButtonFrame2.Name = "ButtonFrame2"
+ButtonFrame2.Parent = ScrollingFrame
+ButtonFrame2.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame2.Position = UDim2.new(0.0452261306, 0, 0.127049923, 0)
+ButtonFrame2.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame2.Font = Enum.Font.SourceSans
+ButtonFrame2.Text = "Mansion"
+ButtonFrame2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame2.TextScaled = true
+ButtonFrame2.TextSize = 14.000
+ButtonFrame2.TextWrapped = true
+
+ButtonFrame3.Name = "ButtonFrame3"
+ButtonFrame3.Parent = ScrollingFrame
+ButtonFrame3.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame3.Position = UDim2.new(0.0452261306, 0, 0.235383242, 0)
+ButtonFrame3.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame3.Font = Enum.Font.SourceSans
+ButtonFrame3.Text = "Hydra Island"
+ButtonFrame3.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame3.TextScaled = true
+ButtonFrame3.TextSize = 14.000
+ButtonFrame3.TextWrapped = true
+
+ButtonFrame4.Name = "ButtonFrame4"
+ButtonFrame4.Parent = ScrollingFrame
+ButtonFrame4.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame4.Position = UDim2.new(0.0452261306, 0, 0.333716571, 0)
+ButtonFrame4.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame4.Font = Enum.Font.SourceSans
+ButtonFrame4.Text = "Beautiful Pirate"
+ButtonFrame4.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame4.TextScaled = true
+ButtonFrame4.TextSize = 14.000
+ButtonFrame4.TextWrapped = true
+
+ButtonFrame5.Name = "ButtonFrame5"
+ButtonFrame5.Parent = ScrollingFrame
+ButtonFrame5.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame5.Position = UDim2.new(0.0452261306, 0, 0.43538323, 0)
+ButtonFrame5.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame5.Font = Enum.Font.SourceSans
+ButtonFrame5.Text = "Port Town"
+ButtonFrame5.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame5.TextScaled = true
+ButtonFrame5.TextSize = 14.000
+ButtonFrame5.TextWrapped = true
+
+ButtonFrame6.Name = "ButtonFrame6"
+ButtonFrame6.Parent = ScrollingFrame
+ButtonFrame6.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame6.Position = UDim2.new(0.0452261306, 0, 0.54371655, 0)
+ButtonFrame6.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame6.Font = Enum.Font.SourceSans
+ButtonFrame6.Text = "Great Tree"
+ButtonFrame6.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame6.TextScaled = true
+ButtonFrame6.TextSize = 14.000
+ButtonFrame6.TextWrapped = true
+
+ButtonFrame7.Name = "ButtonFrame7"
+ButtonFrame7.Parent = ScrollingFrame
+ButtonFrame7.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame7.Position = UDim2.new(0.0452261306, 0, 0.653716564, 0)
+ButtonFrame7.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame7.Font = Enum.Font.SourceSans
+ButtonFrame7.Text = "Ice Cream Island"
+ButtonFrame7.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame7.TextScaled = true
+ButtonFrame7.TextSize = 14.000
+ButtonFrame7.TextWrapped = true
+
+ButtonFrame8.Name = "ButtonFrame8"
+ButtonFrame8.Parent = ScrollingFrame
+ButtonFrame8.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame8.Position = UDim2.new(0.0452261306, 0, 0.762049913, 0)
+ButtonFrame8.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame8.Font = Enum.Font.SourceSans
+ButtonFrame8.Text = "Peanut Island"
+ButtonFrame8.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame8.TextScaled = true
+ButtonFrame8.TextSize = 14.000
+ButtonFrame8.TextWrapped = true
+
+ButtonFrame9.Name = "ButtonFrame9"
+ButtonFrame9.Parent = ScrollingFrame
+ButtonFrame9.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+ButtonFrame9.Position = UDim2.new(0.0452261306, 0, 0.870383322, 0)
+ButtonFrame9.Size = UDim2.new(0, 171, 0, 50)
+ButtonFrame9.Font = Enum.Font.SourceSans
+ButtonFrame9.Text = "Hunded Castle"
+ButtonFrame9.TextColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame9.TextScaled = true
+ButtonFrame9.TextSize = 14.000
+ButtonFrame9.TextWrapped = true
+
 OnButton.Name = "OnButton"
 OnButton.Parent = GuiTP
 OnButton.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
@@ -594,9 +711,83 @@ OnButton.TextScaled = true
 OnButton.TextSize = 14.000
 OnButton.TextWrapped = true
 
+BackGroudFrame2.Name = "BackGroudFrame2"
+BackGroudFrame2.Parent = GuiTP
+BackGroudFrame2.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+BackGroudFrame2.Position = UDim2.new(0.791970789, 0, 0.19826974, 0)
+BackGroudFrame2.Size = UDim2.new(0, 150, 0, 200)
+BackGroudFrame2.Visible = false
+
+LineFrame2.Name = "LineFrame2"
+LineFrame2.Parent = BackGroudFrame2
+LineFrame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LineFrame2.Position = UDim2.new(0, 0, 0.200000003, 0)
+LineFrame2.Size = UDim2.new(0, 150, 0, 0)
+
+HeadText2.Name = "HeadText2"
+HeadText2.Parent = BackGroudFrame2
+HeadText2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HeadText2.BackgroundTransparency = 1.000
+HeadText2.Position = UDim2.new(0, 0, 0.00499999989, 0)
+HeadText2.Size = UDim2.new(0, 150, 0, 30)
+HeadText2.Font = Enum.Font.SourceSans
+HeadText2.Text = "More"
+HeadText2.TextColor3 = Color3.fromRGB(0, 0, 0)
+HeadText2.TextScaled = true
+HeadText2.TextSize = 14.000
+HeadText2.TextWrapped = true
+
+XButton2.Name = "XButton2"
+XButton2.Parent = BackGroudFrame2
+XButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+XButton2.Position = UDim2.new(0.866666675, 0, 0.0333333351, 0)
+XButton2.Size = UDim2.new(0, 20, 0, 20)
+XButton2.Font = Enum.Font.SourceSans
+XButton2.Text = "X"
+XButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+XButton2.TextScaled = true
+XButton2.TextSize = 14.000
+XButton2.TextWrapped = true
+
+OffButton3.Name = "OffButton3"
+OffButton3.Parent = BackGroudFrame2
+OffButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+OffButton3.Position = UDim2.new(0.0533333346, 0, 0.25333333, 0)
+OffButton3.Size = UDim2.new(0, 134, 0, 40)
+OffButton3.Font = Enum.Font.SourceSans
+OffButton3.Text = "Fast Attack"
+OffButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+OffButton3.TextScaled = true
+OffButton3.TextSize = 14.000
+OffButton3.TextWrapped = true
+
+OnButton3.Name = "OnButton3"
+OnButton3.Parent = BackGroudFrame2
+OnButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+OnButton3.Position = UDim2.new(0.0533333346, 0, 0.502683878, 0)
+OnButton3.Size = UDim2.new(0, 134, 0, 41)
+OnButton3.Font = Enum.Font.SourceSans
+OnButton3.Text = "Auto Attack"
+OnButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+OnButton3.TextScaled = true
+OnButton3.TextSize = 14.000
+OnButton3.TextWrapped = true
+
+FarHitButton.Name = "FarHitButton"
+FarHitButton.Parent = BackGroudFrame2
+FarHitButton.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+FarHitButton.Position = UDim2.new(0.0533333346, 0, 0.763333321, 0)
+FarHitButton.Size = UDim2.new(0, 134, 0, 40)
+FarHitButton.Font = Enum.Font.SourceSans
+FarHitButton.Text = "Far Attack"
+FarHitButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+FarHitButton.TextScaled = true
+FarHitButton.TextSize = 14.000
+FarHitButton.TextWrapped = true
+
 -- Scripts:
 
-local function KYWFBZO_fake_script() -- BackGroudFrame.Dragscript1 
+local function FIFU_fake_script() -- BackGroudFrame.Dragscript1 
 	local script = Instance.new('LocalScript', BackGroudFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -634,8 +825,8 @@ local function KYWFBZO_fake_script() -- BackGroudFrame.Dragscript1
 		end
 	end)
 end
-coroutine.wrap(KYWFBZO_fake_script)()
-local function PEUZH_fake_script() -- OnButton.OnScript 
+coroutine.wrap(FIFU_fake_script)()
+local function JPUD_fake_script() -- OnButton.Drag Script 2 
 	local script = Instance.new('LocalScript', OnButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -673,7 +864,75 @@ local function PEUZH_fake_script() -- OnButton.OnScript
 		end
 	end)
 end
-coroutine.wrap(PEUZH_fake_script)()
+coroutine.wrap(JPUD_fake_script)()
+local function MYKW_fake_script() -- BackGroudFrame2.Drag Script 3 
+	local script = Instance.new('LocalScript', BackGroudFrame2)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(MYKW_fake_script)()
+
+
+function TP(P1)
+    Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 250 then
+        Speed = 1000
+    elseif Distance < 500 then
+        Speed = 750
+    elseif Distance < 1000 then
+        Speed = 500
+    elseif Distance >= 1000 then
+        Speed = 350
+    end
+    game:GetService("TweenService"):Create(
+        game.Players.LocalPlayer.Character.HumanoidRootPart,
+        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+        {CFrame = P1}
+    ):Play()
+end
+spawn(function()
+	pcall(function()
+		while wait(.1) do
+				if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Home) then
+					TP(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+			end
+		end
+	end)
+end)
+
 
 --Main
 ButtonFrame1.MouseButton1Click:Connect(function()
@@ -692,6 +951,75 @@ ButtonFrame4.MouseButton1Click:Connect(function()
     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-11996.4462890625, 331.83349609375, -8856.7890625))
 end)
+ButtonFrame5.MouseButton1Click:Connect(function()
+    lol1 = CFrame.new(-201.82833862304688, 6.755743503570557, 5355.521484375)
+    Distance = (lol1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5740.4580078125, 610.4498291015625, -269.5456848144531)
+    elseif Distance < 500  then
+        TP(CFrame.new(-201.82833862304688, 6.755743503570557, 5355.521484375))
+    elseif Distance >= 1000 then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(5740.4580078125, 610.4498291015625, -269.5456848144531))
+    TP(CFrame.new(-201.82833862304688, 6.755743503570557, 5355.521484375))
+    end
+end)
+ButtonFrame6.MouseButton1Click:Connect(function()
+    lol2 = CFrame.new(2301.59521484375, 25.913352966308594, -6548.11279296875)
+    Distance = (lol2.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5740.4580078125, 610.4498291015625, -269.5456848144531)
+    elseif Distance < 500  then
+        TP(CFrame.new(2301.59521484375, 25.913352966308594, -6548.11279296875))
+    elseif Distance >= 1000 then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(5740.4580078125, 610.4498291015625, -269.5456848144531))
+    TP(CFrame.new(2301.59521484375, 25.913352966308594, -6548.11279296875))
+    end
+end)
+ButtonFrame7.MouseButton1Click:Connect(function()
+    lol3 = CFrame.new(-907.3892211914062, 56.27658462524414, -10856.525390625)
+    Distance = (lol3.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5108.10107421875, 313.74127197265625, -3189.948974609375)
+    elseif Distance < 500  then
+        TP(CFrame.new(-907.3892211914062, 56.27658462524414, -10856.525390625))
+    elseif Distance >= 1000 then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-5108.10107421875, 313.74127197265625, -3189.948974609375))
+    TP(CFrame.new(-907.3892211914062, 56.27658462524414, -10856.525390625))
+    end
+
+end)
+ButtonFrame8.MouseButton1Click:Connect(function()
+    lol4 = CFrame.new(-2083.179443359375, 38.12995529174805, -10196.7470703125)
+    Distance = (lol4.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2083.179443359375, 38.12995529174805, -10196.7470703125)
+    elseif Distance < 500  then
+        TP(CFrame.new(-2083.179443359375, 38.12995529174805, -10196.7470703125))
+    elseif Distance >= 1000 then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-5108.10107421875, 313.74127197265625, -3189.948974609375))
+    TP(CFrame.new(-2083.179443359375, 38.12995529174805, -10196.7470703125))
+    end
+end)
+ButtonFrame9.MouseButton1Click:Connect(function()
+    lol5 = CFrame.new(-9513.0849609375, 142.130615234375, 5545.08935546875)
+    Distance = (lol5.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 100 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9513.0849609375, 142.130615234375, 5545.08935546875)
+    elseif Distance < 500  then
+        TP(CFrame.new(-9513.0849609375, 142.130615234375, 5545.08935546875))
+    elseif Distance >= 1000 then
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables")
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-5108.10107421875, 313.74127197265625, -3189.948974609375))
+    TP(CFrame.new(-9513.0849609375, 142.130615234375, 5545.08935546875))
+    end
+end)
+MoreButton.MouseButton1Click:Connect(function()
+    BackGroudFrame2.Visible = not BackGroudFrame2.Visible
+end)
 XButton.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.PlayerGui:FindFirstChild("GuiTP"):Destroy()
 end)
@@ -702,6 +1030,18 @@ end)
 OnButton.MouseButton1Click:Connect(function()
     BackGroudFrame.Visible = not BackGroudFrame.Visible
     OnButton.Visible = not OnButton.Visible
+end)
+XButton2.MouseButton1Click:Connect(function()
+    BackGroudFrame2.Visible = not BackGroudFrame2.Visible
+end)
+OffButton3.MouseButton1Click:Connect(function()
+    _G.FastAttack = not _G.FastAttack
+end)
+OnButton3.MouseButton1Click:Connect(function()
+    _G.AutoAttack = not _G.AutoAttack
+end)
+OnButton3.MouseButton1Click:Connect(function()
+    _G.FarHit = not _G.FarHit
 end)
 spawn(function()
    game:GetService("RunService").RenderStepped:Connect(function()
