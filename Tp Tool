@@ -1,0 +1,21 @@
+if game.Players.LocalPlayer.Backpack:FindFirstChild("Tp Tool") then
+game.Players.LocalPlayer.Backpack:FindFirstChild("Tp Tool"):Destroy()
+end
+mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Tp Tool"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+Distance = (pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+if Distance <= 300 then
+_G.TeleportCooldown = true
+wait()
+print("Teleported Distance : "..Distance)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+_G.TeleportCooldown = false
+else print("Too Far Distance : "..Distance)
+end
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
