@@ -197,7 +197,7 @@ OffButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 OffButton3.Position = UDim2.new(0.0533333346, 0, 0.25333333, 0)
 OffButton3.Size = UDim2.new(0, 134, 0, 40)
 OffButton3.Font = Enum.Font.SourceSans
-OffButton3.Text = "Fast Attack"
+OffButton3.Text = "First Sea"
 OffButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
 OffButton3.TextScaled = true
 OffButton3.TextSize = 14.000
@@ -209,7 +209,7 @@ OnButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 OnButton3.Position = UDim2.new(0.0533333346, 0, 0.502683878, 0)
 OnButton3.Size = UDim2.new(0, 134, 0, 41)
 OnButton3.Font = Enum.Font.SourceSans
-OnButton3.Text = "Auto Attack"
+OnButton3.Text = "Second Sea"
 OnButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
 OnButton3.TextScaled = true
 OnButton3.TextSize = 14.000
@@ -221,7 +221,7 @@ FarHitButton.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 FarHitButton.Position = UDim2.new(0.0533333346, 0, 0.763333321, 0)
 FarHitButton.Size = UDim2.new(0, 134, 0, 40)
 FarHitButton.Font = Enum.Font.SourceSans
-FarHitButton.Text = "Far Attack"
+FarHitButton.Text = "Third Sea"
 FarHitButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 FarHitButton.TextScaled = true
 FarHitButton.TextSize = 14.000
@@ -376,108 +376,13 @@ XButton2.MouseButton1Click:Connect(function()
     BackGroudFrame2.Visible = not BackGroudFrame2.Visible
 end)
 OffButton3.MouseButton1Click:Connect(function()
-    _G.FastAttack = not _G.FastAttack
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
 end)
 OnButton3.MouseButton1Click:Connect(function()
-    _G.AutoAttack = not _G.AutoAttack
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
 end)
-OnButton3.MouseButton1Click:Connect(function()
-    _G.FarHit = not _G.FarHit
-end)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FarHit then
-require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FarHit then
-require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FarHit then
-require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.AutoAttack then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.AutoAttack then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-        end
-    end)
-end) 
+FarHitButton.MouseButton1Click:Connect(function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 end)
 elseif game.PlaceId == 7449423635 then
 wait(.1)
@@ -755,7 +660,7 @@ OffButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 OffButton3.Position = UDim2.new(0.0533333346, 0, 0.25333333, 0)
 OffButton3.Size = UDim2.new(0, 134, 0, 40)
 OffButton3.Font = Enum.Font.SourceSans
-OffButton3.Text = "Fast Attack"
+OffButton3.Text = "First Sea"
 OffButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
 OffButton3.TextScaled = true
 OffButton3.TextSize = 14.000
@@ -767,7 +672,7 @@ OnButton3.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 OnButton3.Position = UDim2.new(0.0533333346, 0, 0.502683878, 0)
 OnButton3.Size = UDim2.new(0, 134, 0, 41)
 OnButton3.Font = Enum.Font.SourceSans
-OnButton3.Text = "Auto Attack"
+OnButton3.Text = "Second Sea"
 OnButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
 OnButton3.TextScaled = true
 OnButton3.TextSize = 14.000
@@ -779,7 +684,7 @@ FarHitButton.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
 FarHitButton.Position = UDim2.new(0.0533333346, 0, 0.763333321, 0)
 FarHitButton.Size = UDim2.new(0, 134, 0, 40)
 FarHitButton.Font = Enum.Font.SourceSans
-FarHitButton.Text = "Far Attack"
+FarHitButton.Text = "Third Sea"
 FarHitButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 FarHitButton.TextScaled = true
 FarHitButton.TextSize = 14.000
@@ -1035,107 +940,12 @@ XButton2.MouseButton1Click:Connect(function()
     BackGroudFrame2.Visible = not BackGroudFrame2.Visible
 end)
 OffButton3.MouseButton1Click:Connect(function()
-    _G.FastAttack = not _G.FastAttack
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
 end)
 OnButton3.MouseButton1Click:Connect(function()
-    _G.AutoAttack = not _G.AutoAttack
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
 end)
-OnButton3.MouseButton1Click:Connect(function()
-    _G.FarHit = not _G.FarHit
-end)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.AutoAttack then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.AutoAttack then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.AutoAttack then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-        end
-    end)
-end) 
-end)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FastAttack then
-            local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
-            local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
-            Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
-            Combat.activeController.timeToNextAttack = 0
-            Combat.activeController.hitboxMagnitude = 120
-            Combat.activeController.increment = 3
-        end
-    end)
-end) 
-end)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FarHit then
-require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
-        end
-    end)
-end) 
-end)
-wait(.1)
-spawn(function()
-   game:GetService("RunService").RenderStepped:Connect(function()
-    pcall(function()
-        if _G.FarHit then
-require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework).activeController.hitboxMagnitude = 2000
-        end
-    end)
-end) 
+FarHitButton.MouseButton1Click:Connect(function()
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
 end)
 end
