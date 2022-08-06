@@ -1,4 +1,4 @@
-
+if game.PlaceId == 5591597781 then
 local CollectionService = game:GetService("CollectionService")
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/jsdnfjdsfdjnsmvkjhlkslzLIB", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/sjkdkjlfdjnnmklcvxjNotifCr"))()
@@ -22,7 +22,7 @@ while wait(.3) do
         v.Text = i.." : "..Players[i]:GetAttribute("Cash")
     end
 end
-
+end
 print([[
 
 --> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
