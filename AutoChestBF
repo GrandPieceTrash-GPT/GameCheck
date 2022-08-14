@@ -1,4 +1,4 @@
-repeat wait() warn("Waiting.") wait(0.5) warn("Waiting..") wait(0.5) warn("Waiting...") wait(0.5) warn("Waiting....") wait(0.5) if game:IsLoaded() then warn("Game Loaded") end until not game:IsLoaded()
+repeat wait() warn("Waiting.") wait(0.5) warn("Waiting..") wait(0.5) warn("Waiting...") wait(0.5) warn("Waiting....") wait(0.5) if game:IsLoaded() then warn("Game Loaded") end until game:IsLoaded()
 
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
 	v.Function()
