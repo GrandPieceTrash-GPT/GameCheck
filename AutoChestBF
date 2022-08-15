@@ -21,6 +21,9 @@ if _G.ChestFarmAllMap == true then
 	end
 	if _G.ServerHop == true then
 	warn("ServerHop Opening")
+		if game:GetService("CoreGui"):FindFirstChild("August Hub") then
+		game:GetService("CoreGui"):FindFirstChild("August Hub"):Destroy()
+	end
 	end
 	if game:GetService("CoreGui"):FindFirstChild("August Hub") then
 		game:GetService("CoreGui"):FindFirstChild("August Hub"):Destroy()
