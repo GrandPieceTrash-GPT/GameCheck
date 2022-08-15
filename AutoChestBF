@@ -1,8 +1,9 @@
 repeat wait() warn("Waiting.") wait(0.5) warn("Waiting..") wait(0.5) warn("Waiting...") wait(0.5) warn("Waiting....") wait(0.5) if game:IsLoaded() then warn("Game Loaded") end until game:IsLoaded()
-
+wait(2)
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
 	v.Function()
 end
+
 
 
 --all config {_G.ChestFarmAllMap, _G.RoundSetting, _G.StopOnFist, _G.ServerHop} 
@@ -2439,6 +2440,11 @@ if _G.ChestFarmAllMap == true then
 	Test:Label("**Before Open Pls Set Spawn At Cafe**")
 	Test:Button("Stop Tween", function()
 		_G.StopTween = true
+		game:GetService("TweenService"):Create(
+			game.Players.LocalPlayer.Character.HumanoidRootPart,
+			TweenInfo.new(0.1, Enum.EasingStyle.Linear),
+			{CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame}
+		):Play()
 	end)
 	Test:Button("Start Tween", function()
 		_G.StopTween = false
@@ -2483,6 +2489,15 @@ if _G.ChestFarmAllMap == true then
 	end)
 	Test:Toggle("Stop when found first of darkness", false, function(FistOfDarkness)
 		_G.StopOnFist = FistOfDarkness
+	end)
+	Tp:Line()
+	Tp:Button("Server Hop", function()
+		local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/4442272183/servers/Public?sortOrder=Asc&limit=100"))
+									for i,v in pairs(Servers.data) do
+										if v.playing ~= v.maxPlayers then
+											game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
+										end
+									end
 	end)
 	Tp:Line()
     Tp:Button("Law Lab", function()
@@ -2718,7 +2733,7 @@ if _G.ChestFarmAllMap == true then
 		if not _G.StopTween then
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6501.6640625, 81.96700286865234, -123.55526733398438)
 		end
-		wait(1) 
+		wait(3.25) 
 		TP(CFrame.new(1250.3302001953125, 128.52992248535156, 33050.67578125))
 		wait(timetowaitV2)
 		TP(CFrame.new(1279.5335693359375, 124.23350524902344, 33114.4453125))--Ghost Ship74
@@ -2741,7 +2756,7 @@ if _G.ChestFarmAllMap == true then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(920.9077758789062, 123.84302520751953, 32842.79296875)
 		end
 	end
-		wait(1) 
+		wait(3.25) 
 		TP(CFrame.new(-5651.54638671875, 265.24462890625, -758.281005859375))--Graveyard82
 		wait(1)
 		TP(CFrame.new(-5221.818359375, 477.55267333984375, -922.3386840820312))--Graveyard83
@@ -2909,7 +2924,7 @@ if _G.ChestFarmAllMap == true then
 				if not _G.StopTween then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6501.6640625, 81.96700286865234, -123.55526733398438)
 				end
-				wait(1) 
+				wait(3.25) 
 				TP(CFrame.new(1250.3302001953125, 128.52992248535156, 33050.67578125))
 				wait(timetowaitV2)
 				TP(CFrame.new(1279.5335693359375, 124.23350524902344, 33114.4453125))--Ghost Ship74
@@ -2932,7 +2947,7 @@ if _G.ChestFarmAllMap == true then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(920.9077758789062, 123.84302520751953, 32842.79296875)
 				end
 			end 
-				wait(1) 
+				wait(3.25) 
 				TP(CFrame.new(-5651.54638671875, 265.24462890625, -758.281005859375))--Graveyard82
 				wait(1)
 				TP(CFrame.new(-5221.818359375, 477.55267333984375, -922.3386840820312))--Graveyard83
@@ -2949,6 +2964,5 @@ if _G.ChestFarmAllMap == true then
 	end
 	until not _G.Fuckyouverymuchwhocrackmyscript
 	
-
 
 
