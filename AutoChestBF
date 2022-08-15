@@ -3,6 +3,12 @@ repeat wait() warn("Waiting.") wait(0.5) warn("Waiting..") wait(0.5) warn("Waiti
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
 	v.Function()
 end
+
+
+--all config {_G.ChestFarmAllMap, _G.RoundSetting, _G.StopOnFist, _G.ServerHop} 
+for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
+	v.Function()
+end
 if _G.ChestFarmAllMap == true then
 	warn("ChestFarm Opening")
 	end
@@ -2248,7 +2254,8 @@ if _G.ChestFarmAllMap == true then
 	
 	local serv = win:Server("August Hub","")
 	
-	local Test = serv:Channel("Blox Fruit", "http://www.roblox.com/asset/?id=7040391851")
+	local Test = serv:Channel("Main", "http://www.roblox.com/asset/?id=7040391851")
+	local Tp = serv:Channel("Teleport", "http://www.roblox.com/asset/?id=7044226690")
 	spawn(function()
 		game:GetService("RunService").RenderStepped:Connect(function()
 			pcall(function()
@@ -2301,6 +2308,47 @@ if _G.ChestFarmAllMap == true then
 				   end
 				   wait(1)
 			end)
+		end)
+	end)
+	
+	spawn(function()
+		game:GetService("RunService").Heartbeat:Connect(function()
+			if Crackman then
+				if not game:GetService("Workspace"):FindFirstChild("LOL") then
+					local LOL = Instance.new("Part")
+					LOL.Name = "ez"
+					LOL.Parent = game.Workspace
+					LOL.Anchored = true
+					LOL.Transparency = 1
+					LOL.Size = Vector3.new(50,-1,50)
+				elseif game:GetService("Workspace"):FindFirstChild("LOL") then
+					game.Workspace["LOL"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
+				end
+			else
+				if game:GetService("Workspace"):FindFirstChild("LOL") then
+					game:GetService("Workspace"):FindFirstChild("LOL"):Destroy()
+				end
+			end
+		end)
+	end)
+	spawn(function()
+		game:GetService("RunService").Heartbeat:Connect(function()
+			if CrackmanV33333 or Crackman then
+				if not game:GetService("Workspace"):FindFirstChild("LOL") then
+					local LOL = Instance.new("Part")
+					LOL.Name = "ez"
+					LOL.Parent = game.Workspace
+					LOL.Anchored = true
+					LOL.Transparency = 1
+					LOL.Size = Vector3.new(50,-1,50)
+				elseif game:GetService("Workspace"):FindFirstChild("LOL") then
+					game.Workspace["LOL"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
+				end
+			else
+				if game:GetService("Workspace"):FindFirstChild("LOL") then
+					game:GetService("Workspace"):FindFirstChild("LOL"):Destroy()
+				end
+			end
 		end)
 	end)
 	_G.ChestCount = 0
@@ -2436,6 +2484,93 @@ if _G.ChestFarmAllMap == true then
 	Test:Toggle("Stop when found first of darkness", false, function(FistOfDarkness)
 		_G.StopOnFist = FistOfDarkness
 	end)
+	Tp:Line()
+    Tp:Button("Law Lab", function()
+		Tp(CFrame.new(-5555.67676, 329.066284, -5928.0415, 0.92589891, 1.76794899e-08, 0.377771407, -1.61038738e-08, 1, -7.32964711e-09, -0.377771407, 7.02929381e-10, 0.92589891))
+	end)
+    Tp:Button("Dock", function()
+        TP(CFrame.new(-12.519311904907, 19.302536010742, 2827.853515625))
+    end)
+
+    Tp:Button("Mansion", function()
+        TP(CFrame.new(-390.34829711914, 321.89730834961, 869.00506591797))
+    end)
+
+    Tp:Button("Kingdom Of Rose", function()
+        TP(CFrame.new(-388.29895019531, 138.35575866699, 1132.1662597656))
+    end)
+
+    Tp:Button("Cafe", function()
+        TP(CFrame.new(-379.70889282227, 73.0458984375, 304.84692382813))
+    end)
+
+    Tp:Button("Sunflower Field", function()
+        TP(CFrame.new(-1576.7171630859, 198.61849975586, 13.725157737732))
+    end)
+
+    Tp:Button("Jeramy Mountain", function()
+        TP(CFrame.new(1986.3519287109, 448.95678710938, 796.70239257813))
+    end)
+
+    Tp:Button("Colossuem", function()
+        TP(CFrame.new(-1871.8974609375, 45.820514678955, 1359.6843261719))
+    end)
+
+    Tp:Button("Factory", function()
+        TP(CFrame.new(349.53750610352, 74.446998596191, -355.62420654297))
+    end)
+
+    Tp:Button("The Bridge", function()
+        TP(CFrame.new(-1860.6354980469, 88.384948730469, -1859.1593017578))
+    end)
+
+    Tp:Button("Green Bit", function()
+        TP(CFrame.new(-2202.3706054688, 73.097663879395, -2819.2687988281))
+    end)
+
+    Tp:Button("Graveyard", function()
+        TP(CFrame.new(-5617.5927734375, 492.22183227539, -778.3017578125))
+    end)
+
+    Tp:Button("Dark Area", function()
+        TP(CFrame.new(3464.7700195313, 13.375151634216, -3368.90234375))
+    end)
+
+    Tp:Button("Snow Mountain", function()
+        TP(CFrame.new(561.23834228516, 401.44781494141, -5297.14453125))
+    end)
+
+    Tp:Button("Hot Island", function()
+        TP(CFrame.new(-5505.9633789063, 15.977565765381, -5366.6123046875))
+    end)
+
+    Tp:Button("Cold Island", function()
+        TP(CFrame.new(-5924.716796875, 15.977565765381, -4996.427734375))
+    end)
+
+    Tp:Button("Ice Castle", function()
+        TP(CFrame.new(6111.7109375, 294.41259765625, -6716.4829101563))
+    end)
+
+    Tp:Button("Usopp's Island", function()
+        TP(CFrame.new(4760.4985351563, 8.3444719314575, 2849.2426757813))
+    end)
+
+    Tp:Button("inscription Island", function()
+        TP(CFrame.new(-5099.01171875, 98.241539001465, 2424.4035644531))
+    end)
+
+    Tp:Button("Forgotten Island", function()
+        TP(CFrame.new(-3051.9514160156, 238.87203979492, -10250.807617188))
+    end)
+
+    Tp:Button("Ghost Ship", function()
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+    end)
+
+    Tp:Button("Mini Sky", function()
+        TP(CFrame.new(-262.11901855469, 49325.69140625, -35272.49609375))
+    end)
 	_G.RoundCount = 0
 	Test:Button("Collect All Chest 1 Time", function()
 		if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
@@ -2814,44 +2949,6 @@ if _G.ChestFarmAllMap == true then
 	end
 	until not _G.Fuckyouverymuchwhocrackmyscript
 	
-	
-	spawn(function()
-		game:GetService("RunService").Heartbeat:Connect(function()
-			if Crackman then
-				if not game:GetService("Workspace"):FindFirstChild("LOL") then
-					local LOL = Instance.new("Part")
-					LOL.Name = "ez"
-					LOL.Parent = game.Workspace
-					LOL.Anchored = true
-					LOL.Transparency = 1
-					LOL.Size = Vector3.new(50,-1,50)
-				elseif game:GetService("Workspace"):FindFirstChild("LOL") then
-					game.Workspace["LOL"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
-				end
-			else
-				if game:GetService("Workspace"):FindFirstChild("LOL") then
-					game:GetService("Workspace"):FindFirstChild("LOL"):Destroy()
-				end
-			end
-		end)
-	end)
-	spawn(function()
-		game:GetService("RunService").Heartbeat:Connect(function()
-			if CrackmanV33333 or Crackman then
-				if not game:GetService("Workspace"):FindFirstChild("LOL") then
-					local LOL = Instance.new("Part")
-					LOL.Name = "ez"
-					LOL.Parent = game.Workspace
-					LOL.Anchored = true
-					LOL.Transparency = 1
-					LOL.Size = Vector3.new(50,-1,50)
-				elseif game:GetService("Workspace"):FindFirstChild("LOL") then
-					game.Workspace["LOL"].CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -3.6, 0)
-				end
-			else
-				if game:GetService("Workspace"):FindFirstChild("LOL") then
-					game:GetService("Workspace"):FindFirstChild("LOL"):Destroy()
-				end
-			end
-		end)
-	end)
+
+
+
