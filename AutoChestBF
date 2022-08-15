@@ -2499,7 +2499,7 @@ if _G.ChestFarmAllMap == true then
 	end)
 	Tp:Line()
     Tp:Button("Law Lab", function()
-		Tp(CFrame.new(-5555.67676, 329.066284, -5928.0415, 0.92589891, 1.76794899e-08, 0.377771407, -1.61038738e-08, 1, -7.32964711e-09, -0.377771407, 7.02929381e-10, 0.92589891))
+		TP(CFrame.new(-5553.22998046875, 329.0662841796875, -5917.41015625))
 	end)
     Tp:Button("Dock", function()
         TP(CFrame.new(-12.519311904907, 19.302536010742, 2827.853515625))
@@ -2584,6 +2584,66 @@ if _G.ChestFarmAllMap == true then
     Tp:Button("Mini Sky", function()
         TP(CFrame.new(-262.11901855469, 49325.69140625, -35272.49609375))
     end)
+	Test:Toggle("ESP Devil Fruit",false,function(BRUHHHHHH)
+		DevilFruitESP = BRUHHHHHH
+		UpdateDevilChams() 
+	end)
+
+	function isnil(thing)
+		return (thing == nil)
+	end
+	local function round(n)
+		return math.floor(tonumber(n) + 0.5)
+	end
+	Number = math.random(1, 1000000)
+	function UpdateDevilChams() 
+		for i,v in pairs(game.Workspace:GetChildren()) do
+			pcall(function()
+				if DevilFruitESP then
+					if string.find(v.Name, "Fruit") then   
+						if not v.Handle:FindFirstChild('NameEsp'..Number) then
+							local bill = Instance.new('BillboardGui',v.Handle)
+							bill.Name = 'NameEsp'..Number
+							bill.ExtentsOffset = Vector3.new(0, 1, 0)
+							bill.Size = UDim2.new(1,200,1,30)
+							bill.Adornee = v.Handle
+							bill.AlwaysOnTop = true
+							local name = Instance.new('TextLabel',bill)
+							name.Font = "GothamBold"
+							name.FontSize = "Size14"
+							name.TextWrapped = true
+							name.Size = UDim2.new(1,0,1,0)
+							name.TextYAlignment = 'Top'
+							name.BackgroundTransparency = 1
+							name.TextStrokeTransparency = 0.5
+							name.TextColor3 = Color3.fromRGB(255, 0, 0)
+							name.Text = (v.Name ..' \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Handle.Position).Magnitude/3) ..' M')
+						else
+							v.Handle['NameEsp'..Number].TextLabel.Text = (v.Name ..'   \n'.. round((game:GetService('Players').LocalPlayer.Character.Head.Position - v.Handle.Position).Magnitude/3) ..' M')
+						end
+					end
+				else
+					if v.Handle:FindFirstChild('NameEsp'..Number) then
+						v.Handle:FindFirstChild('NameEsp'..Number):Destroy()
+					end
+				end
+			end)
+		end
+	end
+
+	
+	
+	spawn(function()
+		game:GetService("RunService").RenderStepped:Connect(function()
+			pcall(function()
+					if DevilFruitESP == true then
+						UpdateDevilChams() 
+					end
+			end)
+		end)
+	end)
+				
+
 	_G.RoundCount = 0
 	Test:Button("Collect All Chest 1 Time", function()
 		if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
