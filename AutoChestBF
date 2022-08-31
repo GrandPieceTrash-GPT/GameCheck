@@ -2303,7 +2303,7 @@ if _G.ChestFarmAllMap == true then
 					if _G.StopOnFist == true then
 					   if game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
 						   _G.StopTween = true
-						   TP3(CFrame.new(-410.9147033691406, 71.81443786621094, 370.7869567871094))
+						   TP3(CFrame.new(-379.70889282227, 73.0458984375, 304.84692382813))
 						   _G.StopOnFist = false
 					   end
 				   end
