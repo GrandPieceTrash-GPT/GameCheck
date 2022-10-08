@@ -1,13 +1,14 @@
 repeat wait() warn("Waiting.") wait(0.5) warn("Waiting..") wait(0.5) warn("Waiting...") wait(0.5) warn("Waiting....") wait(0.5) if game:IsLoaded() then warn("Game Loaded") end until game:IsLoaded()
 wait(2)
-for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
-	v.Function()
-end
-
 --all config {_G.ChestFarmAllMap, _G.RoundSetting, _G.StopOnFist, _G.ServerHop} 
+repeat wait(1)
+if not game.Players.LocalPlayer.Character.Parent == game.Workspace.Characters  then
 for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.MouseButton1Click)) do
 	v.Function()
 end
+end
+until game.Players.LocalPlayer.Character.Parent == game.Workspace.Characters
+
 if _G.ChestFarmAllMap == true then
 	warn("ChestFarm Opening")
 	end
@@ -2254,13 +2255,49 @@ if _G.ChestFarmAllMap == true then
 	local serv = win:Server("August Hub","")
 	
 	local Test = serv:Channel("Main", "http://www.roblox.com/asset/?id=7040391851")
+	local Test2 = serv:Channel("Boss", "http://www.roblox.com/asset/?id=7044226690")
 	local Tp = serv:Channel("Teleport", "http://www.roblox.com/asset/?id=7044226690")
+	function TP3(P3)
+		P4 = P3
+		Distance = (P3.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		Distance2 = (P4.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		if Distance2 < 100 then
+			Speed2 = 2000
+		elseif Distance2 < 250 then
+			Speed2 = 900
+		elseif Distance2 < 500 then
+			Speed2 = 600
+		elseif Distance2 < 1000 then
+			Speed2 = 500
+		elseif Distance2 >= 1000 then
+			Speed2 = 300
+		end
+		if Distance < 100 then
+			Speed = 2000
+		elseif Distance < 250 then
+			Speed = 900
+		elseif Distance < 500 then
+			Speed = 600
+		elseif Distance < 1000 then
+			Speed = 500
+		elseif Distance >= 1000 then
+			Speed = 300
+		end
+		game:GetService("TweenService"):Create(
+			game.Players.LocalPlayer.Character.HumanoidRootPart,
+			TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+			{CFrame = P3}
+		):Play()
+	end
+_G.CanBeSit = false
 	spawn(function()
 		game:GetService("RunService").RenderStepped:Connect(function()
 			pcall(function()
+				if _G.CanBeSit == false then
 				if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
 					game.Players.LocalPlayer.Character.Humanoid.Jump = true
 				end
+			end
 			end)
 		end)
 	end)
@@ -2303,8 +2340,9 @@ if _G.ChestFarmAllMap == true then
 					if _G.StopOnFist == true then
 					   if game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") then
 						   _G.StopTween = true
-						   TP3(CFrame.new(-379.70889282227, 73.0458984375, 304.84692382813))
+						   TP3(CFrame.new(-410.9147033691406, 71.81443786621094, 370.7869567871094))
 						   _G.StopOnFist = false
+						   _G.GotFistOfDarkness = true
 					   end
 				   end
 				   wait(1)
@@ -2400,38 +2438,7 @@ if _G.ChestFarmAllMap == true then
 	end
 	end
 	local PlayerLvl = game:GetService("Players").LocalPlayer.Data.Level.Value
-	function TP3(P3)
-		P4 = P3
-		Distance = (P3.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		Distance2 = (P4.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-		if Distance2 < 100 then
-			Speed2 = 2000
-		elseif Distance2 < 250 then
-			Speed2 = 900
-		elseif Distance2 < 500 then
-			Speed2 = 600
-		elseif Distance2 < 1000 then
-			Speed2 = 500
-		elseif Distance2 >= 1000 then
-			Speed2 = 300
-		end
-		if Distance < 100 then
-			Speed = 2000
-		elseif Distance < 250 then
-			Speed = 900
-		elseif Distance < 500 then
-			Speed = 600
-		elseif Distance < 1000 then
-			Speed = 500
-		elseif Distance >= 1000 then
-			Speed = 300
-		end
-		game:GetService("TweenService"):Create(
-			game.Players.LocalPlayer.Character.HumanoidRootPart,
-			TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-			{CFrame = P3}
-		):Play()
-	end
+
 	_G.StopTween = false
 	Test:Line()
 	Test:Label("Auto Collect All Chest")
@@ -2488,13 +2495,86 @@ if _G.ChestFarmAllMap == true then
 	Test:Toggle("Stop when found first of darkness", false, function(FistOfDarkness)
 		_G.StopOnFist = FistOfDarkness
 	end)
+	Test2:Toggle("Big hitbox", false, function(AUTOBIGHITBOXLOL)
+        _G.BIGHITBOX = AUTOBIGHITBOXLOL
+	end)
+    Test2:Toggle("Auto Kill BB(In Testing Donot Open Or Bug)", false, function(AutoKillBB)
+		_G.AutoKillBB = AutoKillBB
+	end)
+	Test:Toggle("Can Sit", false, function(ABCDEFG)
+        _G.CanBeSit = ABCDEFG
+	end)
+spawn(function()
+    while true do
+        pcall(function()
+            if   _G.BIGHITBOX then
+                for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
+                    if v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+                        if (v.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 200 then
+                            v.HumanoidRootPart.Transparency = 1                    
+                            v.HumanoidRootPart.CanCollide = false
+                            v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                            v.HumanoidRootPart.Anchored = true
+                            _G.BBSPAWNED = true
+                            if(v.HumanoidRootPart.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 40 then
+                                _G.CanbeAtk = true
+								poopcframe = v.HumanoidRootPart.Position
+								SelectBoss = "Darkbeard [Lv. 1000] [Raid Boss]"
+                                else _G.CanbeAtk = false
+                            end
+							else v.HumanoidRootPart.Transparency = 1                    
+								v.HumanoidRootPart.CanCollide = false
+								v.HumanoidRootPart.Size = Vector3.new(1, 1, 1)
+								v.HumanoidRootPart.Anchored = false
+                        end
+                end
+            end 
+        end
+        wait()
+end)
+end
+end)
+
+spawn(function()
+   game:GetService("RunService").RenderStepped:Connect(function()
+    pcall(function()
+		if _G.BIGHITBOX then
+        if _G.CanbeAtk then
+                local VirtualUser = game:GetService('VirtualUser')
+    			VirtualUser:CaptureController()
+					VirtualUser:ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+					_G.CanbeAtk = false
+        end
+	end
+    end)
+end) 
+end)
+
+spawn(function()
+	game:GetService("RunService").RenderStepped:Connect(function()
+	 pcall(function()
+		 if _G.AutoKillBB then
+			 if game.ReplicatedStorage:FindFirstChild(SelectBoss) then
+                TP3(CFrame.new(3464.7700195313, 13.375151634216, -3368.90234375))
+			 elseif not game.ReplicatedStorage:FindFirstChild(SelectBoss) then
+			 if (game.workspace.Enemies:FindFirstChild(SelectBoss).HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 75 then
+				 TP3(CFrame.new(poopcframe))
+			 end
+			 
+		 end
+		 end
+	 end)
+ end) 
+ end)
 	Tp:Line()
 	Tp:Button("Server Hop", function()
 		local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/4442272183/servers/Public?sortOrder=Asc&limit=100"))
 									for i,v in pairs(Servers.data) do
 										if v.playing ~= v.maxPlayers then
+											if v.playing >= 1 then
 											game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, v.id)
 										end
+									end
 									end
 	end)
 	Tp:Line()
@@ -2584,6 +2664,26 @@ if _G.ChestFarmAllMap == true then
     Tp:Button("Mini Sky", function()
         TP3(CFrame.new(-262.11901855469, 49325.69140625, -35272.49609375))
     end)
+local Boss = {}
+for i, v in pairs(game.ReplicatedStorage:GetChildren()) do
+    if string.find(v.Name, "Boss") then
+        if v.Name == "" then
+        else
+            table.insert(Boss, v.Name)
+        end
+    end
+end
+for i, v in pairs(game.workspace.Enemies:GetChildren()) do
+    if string.find(v.Name, "Boss") then
+        if v.Name == "" then
+        else
+            table.insert(Boss, v.Name)
+        end
+    end
+end
+Test2:Dropdown("All boss that spawned",Boss,function(Value)
+    SelectBoss = Value
+end)
 	Test:Toggle("ESP Devil Fruit",false,function(BRUHHHHHH)
 		DevilFruitESP = BRUHHHHHH
 		UpdateDevilChams() 
@@ -2631,8 +2731,7 @@ if _G.ChestFarmAllMap == true then
 		end
 	end
 
-	
-	
+		
 	spawn(function()
 		game:GetService("RunService").RenderStepped:Connect(function()
 			pcall(function()
@@ -2642,7 +2741,6 @@ if _G.ChestFarmAllMap == true then
 			end)
 		end)
 	end)
-				
 
 	_G.RoundCount = 0
 	Test:Button("Collect All Chest 1 Time", function()
@@ -2829,6 +2927,7 @@ if _G.ChestFarmAllMap == true then
 		_G.RoundCount = _G.RoundCount + 1
 		end
 	end)
+
 	_G.Fuckyouverymuchwhocrackmyscript = true
 	Test:Toggle("Collect All Chest", false, function(Crackman)
 		_G.ChestFarmAllMap = Crackman
@@ -3023,3 +3122,7 @@ if _G.ChestFarmAllMap == true then
 	until not _G.Fuckyouverymuchwhocrackmyscript
 	
 
+	while wait() do
+		_G.CanbeAtk = false
+		poopcframe = nil
+	end
