@@ -1,337 +1,381 @@
-Update 11: The Awakening Update
-Released on 10/7/2020 - This update is focused on the awakening of fruits.
+Update 16: Halloween Update 💀
+Released in 5/11/2021 - This update mostly focuses on Halloween-related content, extending on the concepts from last year's Halloween Update.
 
-Fruit awakenings added:
-Flame.
-Ice.
-Quake.
-New currency added, called Fragments, which replaces Rare Artifacts:
-Unlike Artifacts, this currency saves between servers, giving the player the possibility to save them up.
-Dark Blade has been re-imagined:
-New model.
-New and faster combat animations.
-Alternative moves (V2-exclusive):
-Holding Z for at least 0.25s will move the player forward.
-X can be charged for up to 0.4s for a slightly faster attack, and to break Instinct.
-Balance Changes:
-Energy now regens faster the higher the player's max. energy is (2x faster on the ground)
-Killing a player now regens up to 33% of the player's max. energy and health depending on the level difference.
-Reduced the max. number of extra jumps by 2 for the Sky race, and by 1 for other races.
-Added some gravity to dashing in mid-air.
-Increased the speed of dashing on the ground for evolved Races.
-Last Resort no longer takes the player's own health away, and the base damage buff has been increased by 2.5%.
-Reduced the jump height of the Sky race.
-Slightly nerfed the dashing cooldown during Agility.
-Koko's X now casts ~0.04s faster.
-Increased the teleport range on Jitte's X.
-Reduced the stun on Ice's C. The original stun was 2 seconds, now it ranges from 0.6s to 2s depending on how long it traveled for before exploding.
-True Triple Katana changes:
-Reduced the range on Z by ~15%.
-Reduced the stun on Z by 0.2 seconds.
-Reduced the damage on X from 27 to 26.
-Fixed and reduced the tornado hitbox on X (now it acts more like a cone than a big sphere). Also increased the end delay by 0.1s.
-Rubber's V now decreases energy regen by 25% instead of 50% (buff).
-Slightly reduced the delay on Dough's V, and slightly increased the hitbox on X and C.
-Decreased the end lag on Control's C, making it easier to combo.
-Reduced the cooldown on Quake's V.
-Made String's C undodgeable.
-Buffed Dark Coat.
-Bug fixes:
-Fixed the sea teleporting bug.
-Fixed the super speed glitch with Acidum Rifle, Chop and probably everything else.
-Fixed the bug where you could stack left clicks with skills for extra damage (like clicking before using Superhuman's C).
-Fixed the weird animation behavior when moves were being held.
-Fixed a few incorrect accessory descriptions.
-Mostly fixed sword teleports sending you in the wrong direction sometimes.
-Fixed Dough's V spawn position on mobile.
-Fixed enemies taking longer to attack sometimes.
-Fixed Sea Beasts spawning on the ground.
-Fixed the server crash and high ping method.
-Fixed safe zone pushing with Trident.
-Fixed the invisibility glitch with Phoenix.
-Fixed the incorrect positioning on swords during Buddha form.
-Fixed the glitch to fling yourself with certain moves.
-Fixed Darkbeard and other enemies despawning sometimes for no reason.
-Fixed some possible crew bugs.
-Probably fixed Superhuman's C glitching people underground when used from above.
-Fixed glitching underground with True Triple Katana's Z.
-Added some counter-measures for random flinging.
-Made it harder to get stuck underwater due to physics glitching.
-Fixed the short trail's length that Roblox had messed up.
-Fixed Light and Ice swords not working upon eating a fruit.
-Fixed the afterimages bug with Paw and sword skills.
-Fixed a bug that caused Control's V to break sometimes.
-Fixed Buddha's glitchy movement with a lot of moves and dashing.
-Fixed the loss of control after landing on the ground with certain moves.
-Fixed the ugly pixel gaps in the fruit shop.
-Fixed the bug to stack Dragon Breath with Superhuman.
-Other changes:
-Game Passes can now be gifted to other players through the in-game shop.
-Added a way to switch between awakened and unawakened moves.
-Added a way to increase your crew capacity.
-Added a way to change the stage of your Aura ability visually.
-Added mouse lock to mobile.
-Instinct can now be toggled by pressing E.
-Race V3 abilities can now be activated on mobile by tapping a new button or by pressing T on PC.
-VIP server owners can now shut down Second Sea servers by typing "/shutdown" in the chat.
-Added a confirmation window to eating fruits.
-Doghouse V2 now sells physical Spike fruits.
-Increased the number of visible ranks on the bounty/respect leaderboards from 100 to 250.
-Slightly decreased the volume of every SFX.
-Optimized Observation for mobile (less laggy).
-Can no longer deal or receive damage to other players during portal raids.
-New server message for people with 15M+ bounty/honor.
-Made the Legendary Sword Dealer spawn 1 hour faster.
-Added a notification when you reach Level 700 to learn how to get to the next world.
-Dashing now automatically activates sprinting on PC.
-Flash Step can now be canceled on mobile by tapping the button again.
-Added a chess minigame.
-Update 12: Halloween Update 🎃
-Released on 21/10/2020 - This update is focused on Halloween changes (spooky stuff) and awakenings.
-
-New level cap: 1350
-New fruit awakenings:
-Light
-Dark
-New sword:
-Midnight Blade
-New gun:
-Bizarre Rifle
-New accessories:
-Ghoul Mask
-Blue Spikey Coat
-Red Spikey Coat
-Added a titles system:
-Titles are obtained by completing secret tasks in the game, such as completing a raid in under 5 minutes.
-They are displayed next to your chat name. Example: ["Demon Eye"][mygame43]: Erin!!!
-Titles that are harder to obtain will have custom colors.
-Find the new NPC to see a list of all available titles. Currently, there are more than 100 of them.
-Added the Ghoul race:
-V1: Becomes stronger during the night (increased speed and health regen).
-V2: Unlocks the ability to life leech.
-V3: User gains increased damage, defense, and speed. Moves have 40% less cooldown. Lasts 8 seconds.
-Nerfed Quake V2:
-Added some ending lag to the Z when it lands.
-Longer X and C wind up.
-Decreased the hitbox and speed on X.
-Slight damage reduction.
-Buffed True Triple Katana:
-Decreased the end lag on Z and X
-Very slightly increased the hitbox on Z and X
-Fixed the snow tree (!!!)
-"Misc. bug fixes"
-Update 13: The Christmas Update 🎄
-Released on 23/12/2020 - This update is mostly focused on Christmas-related content being added.
-
-New level cap: 1450
-New fruit awakening:
-String.
-New fruit:
-Dragon
-Pick your own color.
-2 different modes:
-Untransformed:
-4 abilities.
-Build up your Fury Meter over time to reveal your true strength!
-Transformed (ultimate form):
-3 destructive abilities.
-Deplete your Fury Meter by destroying everything in your path!
-New fighting style:
-Death Step.
-New legendary sword:
-Rengoku.
+New level cap: 2100
+Enabled Halloween event:
+Collect Bones by defeating enemies around your level (50% drop chance) and spend them on special rewards!
+Halloween NPC "Death King" added to all seas, which sells:
+Random Surprise
+Refund Points
+Reroll Race
 New island:
-Ice Castle/Frost Mountain
-2 new drops:
-Hidden Key
-Library Key
+Haunted Castle
+Better bone drops at this location.
+New Raid Boss:
+Soul Reaper
+2 new fruits:
+Shadow
+Build up your Umbra Meter by landing your moves on enemies, or using them during the night.
+Press V to unleash a massive explosion that scales with your Umbra Meter.
+Revive
+Unique mechanic: By activating C, you'll be revived at 50% health the next time you die. However, you can only use this move once, until dying one more time.
+New sword:
+Hallow Scythe
+Unique mechanic: The moves deal more damage the lower the opponent's health is (up to 1.4x).
+New fighting style:
+Dragon Talon
+New accessories:
+Bear Ears
+Golden Sunhat
+Holy Crown
+Added some new titles.
+Fixes:
+Players no longer lose bounty after 3/3 PvP kills.
+Made the Aura effects look slightly better on weapons.
+Added better protection against exploiters.
+This includes a lot of changes that you should not notice as a regular player.
+Patched the infinite Fury Meter with Venom glitch.
+Fixed the Raid glitch where you would hold a move and get teleported back to the Lab.
+Attempted to patch the infamous Buddha speed glitch.
+This patch was not successful.
+Attempted to patch the glitch where players under level 1500 could go to the Third Sea.
+This patch was not successful.
+However, players under level 1500 can no longer deal any damage whatsoever to the Indra boss.
+Buffs:
+Control
+Increased damage on the X move.
+Nerfs:
+Magma V2
+Reduced the range of the Z move.
+Update 17 Part 1, Christmas update
+Released on 31/12/2021 - This update mostly focuses on Christmas-related content, extending on the concepts from last year's Christmas Update.
+
+New level cap: 2200
 Enabled Christmas event:
 Collect candies by defeating enemies around your level, and trade them for special rewards!
-Christmas NPCs added to BOTH seas:
-Santa Claws (LIMITED TIME ITEMS):
+Christmas NPCs added to all seas:
+Santa Claws (OBTAINABLE AS OF UPDATE 18) :
 Elf Hat
 Santa Hat
 Sleigh
 Magic Elf:
-2x EXP (20 min.)
+2x EXP (15 min.)
 Stats Refund
 Race Reroll
 Blox Fruit Dealer's Cousin:
 Random Fruit (2 hours cooldown between purchase)
-Greedy Elf (Second Sea only):
+Greedy Elf (Second and Third world only):
 Fragments
-Buffed True Triple Katana:
-Decreased end lag on X.
-Nerfed Dark Step:
-Decreased damage boost with Devil
-Fixed server crashing with Control.
-Added a few new titles.
-UPDATE 14 🤖
-Released on 20/3/2021 - This update is focused on convenient things and fixes, along with a load of new content.
+New islands:
+Peanut Island
+Level 2075 > 2125
+Ice Cream Land
+Level 2125 > 2200
+Defeat the Queen for a rare drop!
+New fruit:
+Soul
+Build up Soul and mood meters by defeating enemies or landing moves
+Spend your souls on different buddies that aid you in battle:
+Toxic Flower: Poisons Nearby enemies
+Cursed Tree: Stuns Nearby enemies
+Candy: Heals the user
+New Awakening:
+Sand
+New sword:
+Buddy Sword
+Mechanic: The X move deals more damage to the FARTHER (not closer, the admin just made a mistake in describing the sword) than you are to your opponent
+Misc.
+Added Vietnam cone
+Update 17: Part 2
+Released on 12/3/2022 - This update focuses on Bird: Phoenix awakening, as well as other misc changes.
 
-New level cap: 1525
-Disabled Christmas event.
-New island:
-Forgotten Island
-Final Second Sea island before Third Sea is added (coming next update)
-New fruit awakening:
-Rumble
-New fighting style:
-Sharkman Kung Fu
-New race (specializes against teamers):
-Cyborg
-V2 - 10% defense against melee, sword, and gun attacks. Additionally, 15% of received damage converts to Energy.
-V3 - Defense increases to 80% against any attack. After 2.5 seconds, release an explosion equal to 40% of absorbed damage + 7.5% of your max health.
-New swords:
-Pole V2
-Dragon Trident
-Added a few new titles.
-Blox Fruits Dealer Cousin officially added:
-Instead of candies, it costs regular Money.
-Price increases the higher your level is.
-Same 2 hours cooldown between purchases.
-Added Enhancement colors (second sea only):
-Customize your Enhancement color.
-Find the Master of Auras NPC to buy new colors, or buy them directly from the Colors Specialist with Robux.
-Weapons like True Triple Katana now have a white helix by default.
-Looks better on blocky bodies. Currently working on a better method for Rthro bodies.
-Added Youtuber kill rewards:
-Killing selected YouTubers will reward you with a special title (Second Sea only, different title per YouTuber).
-Additionally, you will earn MoneyIcon.png 250,000 and FragmentIcon.png 2,500 (both seas, one-time reward), as long as the level difference isn't greater than 800.
-Only a few YouTubers have been added for now. More will be added later on.
-Added small benefits for Roblox Premium members.
-Minor upgrade to Fast Mode:
-Disables certain effects that may cause FPS drops, especially the ones on Dragon's moves.
-Changes to the Legendary Sword Dealer:
-Changed spawn rate from 4-6 hours to 3-5 hours.
-Changed despawn time from 5 minutes to 15 minutes.
-Increased max bounty/respect to 25M (doesn't increase PvP boost after 20M+).
-Fixes:
-Fixed scam messages in the first world.
-Fixed the Aura effect not scaling correctly on Buddha and Rubber.
-Fixed the fruits gifting menu not showing everyone on the server.
-Reset the raid leaderboard and fixed the exploit to get on the top 100.
-Dough:
-Fixed the flinging bug with C and F.
-Dark:
-Fixed the bug where people got stuck using unawakened C.
-Fixed awakened V not despawning sometimes.
-Fixed the awakened C effect sometimes getting stuck during raids.
-Chat notifications now also show as game notifications (this means Xbox players can now see factory raids).
-Buffs:
-Death Step
-Reduced the requirement from 450 mastery to 400.
-Buddha
-Slightly buffed V hitbox.
-True Triple Katana
-Slightly reduced end lag on Z.
-String awakening:
-Buffed Z range, speed, and stunning.
-Buffed X hitbox, stun and charge time.
-Control:
-Increased the stun on C.
-Slightly increased the damage on V.
+Disabled the Christmas event.
+New level cap: 2300
+New island added:
+Cake Land
+Defeat enough enemies to summon a new Raid Boss!
+Added Bird: Phoenix awakening.
+Added a new accessory.
+Added a new weapon.
+Added new titles, most notably new YouTuber titles/rewards.
+Added Sea Events to Second and Third sea:
+Sea Events will spawn randomly when a player is driving their boat. They occur more often in the Third Sea.
+List of events:
+
+Ship Raid: NPC ships will randomly start attacking your boat. Defeat them for fragment rewards and possibly a random fruit.
+Sea Beast: Just a Sea Beast. Revamped looks.
+Rumbling (third sea exclusive): Multiple sea beasts will spawn during a storm. Defeat them for greater fragment rewards.
+Mirage Island (third sea exclusive): Spawns a mythical island with hidden treasures.
+More coming soon
+The difficulty of Sea Events will scale with player level, this also applies to Sea Beasts.
+
+Re-implemented the Server Browser (without a Bounty filter, until we figure out the best way to patch bounty exploiters)
+Revamped the animations of a few weapons (more coming soon), Bisento being an example.
+Added a damage counter for combos, which can be toggled in Settings.
+Added a quest tracker along with a compass, which should help inexperienced players find recommended quests.
+Added Advanced Raids, which must first be unlocked, and are harder to complete than regular Raids.
+Also, Raids' difficulties will now scale with participants' levels.
+Added ping compensation to stuns. Players with higher ping should have a better combat experience now.
+Globally buffed the experience every Quest gives.
+Added a new mob and quest to the First Sea (Impel Down New area), and adjusted the level requirements of some other quests.
+In order to nerf aimbot, guns will now deal reduced damage to other players every consecutive hit, in the Second and Third sea only.
+How it works:
+The First hit will deal 100% damage.
+The Second hit will deal 66%
+Third and further hits will deal with 33%.
+After a few seconds, the timer will be reset.
+Note: These changes only apply when your opponent is moving. Guns will always deal full damage when the opponent is not moving.
+This should allow legit players to continue using guns effectively. Also, Suspicious Kill now triggers more accurately.
+
+Reworked the Mastery stat buff formula:
+Instead of gaining 1 point every 3 mastery levels, you'll gain 1 point every 4 levels and a small % based on your Player Level (up to 10% of your Player Level at 600 Mastery).
+Example: At Player Level 2300 and 500 Mastery, you should have 500/4 + 2300*(500/600)*0.1 = 316 extra points.
+Basically, this just makes you gain more stat points from the mastery system.
+Added Fan Art frames in the Café and Mansion (Third Sea).
+Added a date restore option for people who were falsely banned. Also reduced the data punishment on future resets.
+Currently testing a new text translation method, text may not be translated temporarily. This should allow us to support more languages soon, such as Thai.
+Upon leveling up, your health and energy will heal by 70% if you're not in PvP combat.
+You can now upgrade max crew member up to 30 (previous cap was 25)
+Changed max daily trade from 4 to 5.
+Changed max Bounty/Honor to 30M. However, you won't gain any additional PvP boosts after 25M.
+Renamed Treasure Capacity to Fruit Storage and gave it a proper icon.
+QoL:
+Trying to spend more stat points than you currently have now the max amount of points you can use (you don't have to do the math anymore when trying to max out a stat).
+Improved the visual effect on Race V3 abilities.
+Improved the visual effect on Dark Blade's abilities (including Triple Dark Blade!)
+Improved the visual effects on some Rumble V2 abilities.
+Improved the Death Step wind affect quality.
+Improved the 2x Mastery indicator (now shows in the EXP gain message)
+Added LoD optimizations to the Third Sea, this should increase average FPS.
+Greatly optimized click combat, this should increase average FPS.
+Greatly optimized server hitboxes, this should decrease average ping.
+Optimized server physics, this should decrease average ping.
+Lowered the respawn time of First Sea bosses for a better experience.
+Lowered cooldown on fruits with only 2 moves (Bomb, Spike)
+While Instinct V2 is active, chasing a player in combat that is trying to run away will buff your dashes generally by 50% (using a ring as the indicator)
+Instinct V2 now displays levels properly.
 Nerfs:
-Dragon
-Nerfed defense from 70% to 62.5%.
-Triple Dark Blade
-Heavily nerfed.
-Official lore update
-Update 15: Third Sea 🌊
-Released on 11/9/2021 - This update is almost completely focused on the Third Sea.
-
-New level cap: 2000
-Added Third Sea:
-Islands:
-Floating Turtle
-Hydra Island
-Port Town
-Great Tree
-Castle on the Sea
-Added new missions and secrets to be completed.
-New fighting style:
-Electric Claw
-New swords:
-Yama
-Tushita
-Dark Dagger
-Canvander
-Twin Hooks
-New accessories:
-Lei
-Pilot Helmet
-Musketeer Hat
-Jaw Shield
-Pretty Helmet
-Valkyrie Helmet
-Bandanna
-Hunter Cape
-New gun:
-Serpent Bow
-Added 7 new fruits:
-Added a new high tier fruit, Venom:
-Unleash your transformation for increased defense, jump power, and damage.
-2 different modes:
-Untransformed:
-5 abilities.
-Build up your Fury Meter over time to transform.
-Transformed (ultimate form):
-4 stronger abilities.
-Deplete your Fury Meter by using your upgraded abilities.
-Added a new fruit: Spin
-Added a new fruit: Door
-Added a new fruit: Kilo
-Added a new fruit: Diamond
-Added a new fruit: Love
-Added a new fruit: Falcon
-New fruit awakenings:
-Magma
-Buddha
-Added a few new titles.
-Implemented Fruit Inventory and Trading:
-Treasure Storage:
-Can only store up to 1 of each fruit, and unlimited Game Passes.
-This capacity can be increased with [+1 Treasure Cap] (obtained with Robux or by trading with other players).
-Treasure Storage is a chest NPC that can be found in some parts of the map, just like Weapon Storage.
-Fruit Trading:
-You can trade your stored fruits for different fruits or Game Passes.
-To trade Game Passes, you must purchase them as a gift for yourself first.
-Game Passes are stored alongside fruits, in the new Treasure Storage menu.
-Max 4 fruits/Game Passes in each trade for both sides. For example: Dragon + Light + Flame + Smoke for Dark Blade.
-Added Instinct V2:
-View the level and Hotbar of your opponent.
-Some other perks.
-Added Server Browser:
-Find new servers you haven't joined before.
-Filter by Total Bounty, Region, and Server Name.
-Please note: This feature is completely removed, for unknown reasons. Probably due to the difficulty of moderating said servers.
-Friendly 1v1s:
-Added a friendly 1v1s arena to Third Sea. Might be added to other seas later on.
-Prevents bounty loss on death.
-Fast Spawn event:
-During weekends, fruits will spawn every 45 mins instead of every hour.
-Youtuber Rewards V2:
-Added some more YouTubers to the list. More will be added later on.
-Improved the swimming mechanic.
-Balance changes:
-String V2:
-Added auto-aim to the C move, and decreased its damage by around 5%.
+Nerfed the hitbox and stun on the Z move of Pole (2nd Form).
+Slightly nerfed the stuns on Acidum Rifle.
+Sand V2:
+Re-balanced the general damage.
+The X move now stuns the user for 1.8s after a successful grab.
+Fast Mode now reduces the particles on the Z and V moves, to reduce lag.
+Dark V2:
+Slightly nerfed the hitbox on the X move.
+Soul:
+Nerfed the damage on X.
 Dragon:
-The fury meter now regens slightly faster.
-Buddha V1:
-Instead of increasing HP based on your Blox Fruit stat, now it increases defense by 40%.
-Cyborg:
-Energy Core now explodes one 1-second faster, has more stun, and has higher defense.
-Also changed how the V2 accessory looks.
-Dark Blade:
-Reduced end lag on the Z move.
-Pole V2:
-Made it a bit harder to break observation with Z.
+Reduced the damage on transformed Z and X.
+Transforming now costs 20% of the user's Fury Meter.
+Venom:
+Transforming now costs 20% of the user's Fury Meter.
+Buffs:
+Sharkman Karate:
+The X now breaks Instinct.
+The Z hitbox now gets bigger towards the end of the attack.
+Cyborg V3:
+Reworked the special ability, now it disables the Instinct ability of nearby opponents with weak lightning particles (damage based on your Player Level). Starts at 0.1 damage/hit, and increases by 0.1 every 10 levels.
+It also increases defense by 30% while the V3 ability is active.
+Sky V3:
+The special ability now increases defense by 15%, instead of nerfing your damage by 30%.
+True Triple Katana:
+Reduced lag on both moves, although reduced it more on Z.
+Made the X move slightly faster and bigger.
+Slightly buffed the damage on both moves.
+Flame V2:
+The F move now has a higher initial speed boost.
+Increased the damage on the Z move. Additionally, it grows in size as it travels.
+Light V2:
+The X projectiles now have a longer range, and ignore Instinct.
+Magma V2:
+The magma balls now deal way higher tick damage.
+Slightly buffed explosion damage on Z.
+The C now ignores Instinct.
+Magma Awakened user can walk on water
+Ice V2 changes:
+Revamped the V effect and made it stun longer and cast faster, similar to V1. However, it cannot be cast mid-air anymore, and the hitbox only exists horizontally.
+Revamped the C effect and made it stun longer and travel slightly faster.
+String V2:
+Greatly increased the auto-aim and speed on the C move.
+Soul:
+Lowered cooldowns on the X, C, F, and click moves.
+X and C now have the same cooldown duration.
+Z can now steal up to 2 souls by hitting multiple enemies at once.
+Slightly increased the mood damage modifier on the V move.
+Buffed the damage and hitbox on C.
+Control:
+Lowered cooldown on X and F, made them pretty similar.
+Increased the damage on the V move, and it no longer shrinks after catching a player, and doesn't disappear after the move.
+The Z room now lasts way longer.
+Dragon:
+Slightly increased defense while transformed.
+Greatly reduced the passive Fury drain.
+While transformed, taking damage now increases your Fury meter, and all cooldowns are reduced.
+Diamond:
+Increased passive defense from 22.5% to 25%.
+Falcon:
+Increased passive defense from 7.5% to 10%.
+Door:
+Teleporting with C now gives you short immunity frames.
+Bisento:
+Changed price from MoneyIcon.png 1,200,000 to MoneyIcon.png 1,000,000 .
+Increased V2's X move hitbox.
+Bug fixes:
+Fixed 2 unobtainable titles.
+Fixed wrong title description on Sand awakening.
+Fixed low levels being able to join other seas.
+Fixed multiple VIP servers purchased in the same account share the same seas.
+Fixed teleporting between seas in VIP servers (except to First Sea)
+Fixed Buddha's speed and dashing glitches.
+Also fixed enemies not being able to hit Buddha V2.
+Fixed the chess table glitching your aim.
+Fixed leaderboards not updating properly.
+Fixed god mode, anti-teleport bypass, and invisible mode exploits.
+Fixed a few GUI mistakes.
+Fixed the Level Up notification displaying the wrong value sometimes.
+Fixed click combat not dealing damage sometimes.
+Fixed the gun aim icon getting stuck sometimes.
+Update 17: Part 3
+Update 17.3 was released on 10/9/2022.
+
+Increased Level Capacity to 2400.
+Added Chocolate Island.
+Added a new Raid boss Dough King.
+Added a new Mythical fruit: Leopard.
+Added a new Fruit Awakening: Dough.
+Added a new Mythical Gun Soul Guitar.
+Added a new Mythical Sword Cursed Dual Katana.
+Added a new fighting style: Godhuman.
+Items expansion:
+Item inventory:
+You no longer have to talk to Inventory NPCs to change items, this can now be done through a menu button.
+All items have received proper descriptions and other stats (made by tort).
+New item types:
+Permanent Fruits/Stats Refund: They can now be stored in your inventory and traded to other players, pretty much like Dark Blade and other Robux items.
+Materials: Can be used to upgrade and craft certain items.
+Upgradable items:
+Items can now be upgraded, which increases their base stats and unlocks modifier slots.
+To upgrade items, you must loot materials ("valuables") from enemies, bosses, map spawns, etc.
+Item categories reworked:
+Treasures: Anything consumable or highly valuable, such as Fruits, Game Passes, Scrolls, Stat Refunds, etc.
+Valuables: Items you can use to upgrade your weapons, activate certain map events, etc.
+More unique items will be coming in the future.
+Titles expansion:
+Players will now display their titles above their character instead of only the chat.
+Colorless titles now have unlockable pastel colors. Special colors are still exclusive to rare titles.
+Immersion upgrade:
+Most animations and effects have been upgraded.
+Improved the sea visuals and boat physics.
+Footstep sounds have been added.
+Improved the atmosphere on Seas 1 and 2.
+Added Race Awakenings:
+Fill up your awakening meter during the heat of a battle.
+When your meter is full, you can activate a unique awakening exclusive to each race.
+Benefits:
+Since awakenings only grant offensive buffs, long battles will end faster.
+All awakenings will make your opponent unable to get away. It's either fight or die.
+Teamers will become less of an issue since the person at a disadvantage will be the first one to activate their awakening.
+A lot of fruits, fighting styles and weapons have been remade or reworked:
+Reworked Dragon C Move
+Reworked Dark V1.
+Reworked Ice V1.
+Reworked Electric.
+Reworked Water Kung Fu.
+Reworked Dark Step.
+Reworked Dragon Breath.
+Reworked Flame V1.
+Reworked Flame V2.
+Reworked Spring.
+Reworked Chop,
+Reworked Quake V1.
+Reworked Bomb.
+Reworked Spike.
+Reworked Gravity.
+Reworked Ice V2.
+Reworked Light V1.
+Reworked Light V2.
+Reworked Buddha V1.
+Reworked Phoenix V1.
+Reworked Smoke.
+Reworked Sand V1.
+Reworked Rubber.
+Reworked Magma V1.
+Reworked Buddha V1 X move.
+Upgraded the animations of a few other tools.
+Revamped all fruit reflexes.
+Revamped dashes.
+Close Combat Rework Part 1:
+Completely remade all the character animations for every fighting style and weapon.
+Home Points rework:
+Players will now automatically respawn at their last location. This is so you don't forget to set your spawn at new islands.
+Additionally, you can now set a "Home Point" at important locations, such as Café or Mansion. You can return there at any time by pressing a screen button.
 Fixes:
-Fixed the pencil head bug.
-Fixed a crew system bug that caused actions to error or not save.
-Fixed a text auto-translation bug on notifications and dialogue.
-Fixed inventory showing the wrong items sometimes.
-Improved the check on failed purchases.
-Added security against several exploits.
-Made a few optimization upgrades, the game should run slightly faster than before.
+Improved the experience for mobile players by fixing many bugs and adding optimizations.
+Improved enemy indicators during raids.
+Improved shift lock.
+Fast Mode now decreases the resolution of certain textures.
+Fixed a glitch with Agility which gave you infinite speed.
+Balance:
+Changed how Soul works:
+The size of X now scales with the blue bar.
+The damage of C now scales with the red bar.
+Nerfed base stats of both moves.
+Rebalanced dashes and run speed on all the races. The speed gap between Mink and other races shouldn't be that huge anymore.
+Character gravity now slowly increases the further away you are from the ground, to avoid sky camping.
+Misc:
+Added a new Hotbar which supports extra slots for mobile.
+Dashes now become slightly shorter in Safe Zones.
+Improved menu notifiers.
+Confetti Event
+The Confetti Event was released on 11/30/2022. Ended on 12/6/2022
+
+The Confetti Event lasted for a week, where a new material named Confetti was added. It was made to celebrate Blox Fruits hitting 10 billion visits, and their YouTube channel Gamer Robot hitting 1 million subscribers.
+New Material - "Confetti". You can obtain 100 every hour (resets at :00 on the clock for everyone).
+Spend Confetti at the Party Shop NPC to get free items!
+Confetti can be obtained by collecting chests(Third sea only), or talking to NPCs with Party Hats on them.
+Update 17 Part 3.5, Christmas Update
+Released on 12/26/2022 - This update mostly focuses on Christmas-related content, reworks, and bug fixes.
+
+New level capacity: 2450
+Enabled Christmas event
+New event island North Pole 1st/2nd sea only
+New event that happens every hour at the center of the North Pole island
+Ended 1/1/23
+New fruit:
+Blizzard
+New accessory:
+
+Holiday Cloak
+New Island:
+
+Candy Cane Land
+Level 2400 > 2450
+Reworks:
+Portal (previously Door)
+Spirit (previously Soul)
+Death Step
+Awakened Flame Z move
+Awakened Dark X, C and V
+Awakened Light X move
+Light Sword revamped
+Adjusted Sharkman Karate X and C moves
+Sleigh
+Other Info:
+Blox Fruits Dealer Cousin renamed to Blox Fruit Gacha
+New Dealer Cousin Dialog
+Lord of Destruction renamed To Instinct Teacher
+Master of Enhancement renamed to Master of Auras
+Enhancement Editor renamed to Aura Editor
+Enhancement renamed to Aura
+Observation renamed to Instinct
+Fish, Sky, Mink renamed to Shark, Angel, Rabbit
+Removed (Max. 600) text
+You instantly get Spirits instead of getting them from NPCs or Players.
+Fixes:
+Fixed Venom transformation not working.
+Fixed Party Hat and Aquamarine not showing up.
+Fixed the Sleigh bug.
+Fixed being unable to unstore fruits on First Sea.
+Fixed a visual bug with mastery.
+Race V4
