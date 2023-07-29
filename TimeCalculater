@@ -39,9 +39,9 @@ local sec = overflow_sec -- Store the final seconds
 -- Format and store the calculated time
 getgenv().CalculatedTime = string.format("%02d:%02d:%02d", hour, min, sec)
 -- Return the data
-Result = {
+CalculatedTimeResult = {
 getgenv().CalculatedTime,
 getgenv().remainingmin,
 getgenv().remainingsec,
 }
-return Result
+return CalculatedTimeResult
