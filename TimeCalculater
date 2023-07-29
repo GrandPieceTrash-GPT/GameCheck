@@ -1,13 +1,13 @@
 -- Get the strategy completion time in seconds (timer)
 local timer = getgenv().timer
-getgenv().delaytimer2 = timer + getgenv().delaytimer
+getgenv().calculateddelaytime = timer + getgenv().delaytimer
 
 -- Get the current time
 local PlayerTime = os.date("*t", os.time())
 
 -- Calculate remaining minutes and seconds from the delay
-getgenv().remainingmin = math.floor(getgenv().delaytimer2 / 60) -- Calculate remaining minutes
-getgenv().remainingsec = getgenv().delaytimer2 % 60 -- Calculate remaining seconds
+getgenv().remainingmin = math.floor(getgenv().calculateddelaytime / 60) -- Calculate remaining minutes
+getgenv().remainingsec = getgenv().calculateddelaytime % 60 -- Calculate remaining seconds
 
 -- Add the remaining time to the current time
 local rawmin = PlayerTime.min + getgenv().remainingmin -- Calculate updated minutes
@@ -35,6 +35,6 @@ CalculatedTimeResult = {
 getgenv().CalculatedTime,
 getgenv().remainingmin,
 getgenv().remainingsec,
-getgenv().delaytimer2,
+getgenv().calculateddelaytime,
 }
 return CalculatedTimeResult
