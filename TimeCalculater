@@ -1,0 +1,41 @@
+-- Get the strategy completion time in seconds (lobbyrejointimer)
+local timer = getgenv().lobbyrejointimer
+local PlaceID = game.PlaceId
+local delay = timer + getgenv().delaytimer
+
+-- Get the current time
+local PlayerTime = os.date("*t", os.time())
+
+-- Calculate remaining minutes and seconds from the delay
+getgenv().remainingmin = math.floor(delay / 60) -- Calculate remaining minutes
+getgenv().remainingsec = delay % 60 -- Calculate remaining seconds
+
+-- Anti AFK function
+local VU = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   VU:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+   wait(0.1)
+   VU:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
+
+-- Add the remaining time to the current time
+local rawmin = PlayerTime.min + getgenv().remainingmin -- Calculate updated minutes
+local rawsec = PlayerTime.sec + getgenv().remainingsec -- Calculate updated seconds
+
+-- Calculate overflow values for seconds and add them to minutes
+local overflow_min = math.floor(rawsec / 60)
+local overflow_sec = rawsec % 60
+rawmin = rawmin + overflow_min
+
+-- Calculate overflow values for minutes and add them to hours (12-hour format)
+local overflow_hour = math.floor(rawmin / 60)
+local min = rawmin % 60
+
+local rawhour = PlayerTime.hour + overflow_hour
+local hour = rawhour % 12
+hour = hour == 0 and 12 or hour  -- Convert 0 to 12
+
+local sec = overflow_sec -- Store the final seconds
+
+-- Format and store the calculated time
+getgenv().CalculatedTime = string.format("%02d:%02d:%02d", hour, min, sec)
