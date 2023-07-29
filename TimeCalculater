@@ -1,6 +1,6 @@
 -- Get the strategy completion time in seconds (timer)
 local timer = getgenv().timer
-local getgenv().delaytimer2 = timer + getgenv().delaytimer
+getgenv().delaytimer2 = timer + getgenv().delaytimer
 
 -- Get the current time
 local PlayerTime = os.date("*t", os.time())
