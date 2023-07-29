@@ -37,6 +37,8 @@ hour = hour == 0 and 12 or hour  -- Convert 0 to 12
 local sec = overflow_sec -- Store the final seconds
 
 -- Format and store the calculated time
-return getgenv().CalculatedTime = string.format("%02d:%02d:%02d", hour, min, sec)
+getgenv().CalculatedTime = string.format("%02d:%02d:%02d", hour, min, sec)
+-- Return the data
+return getgenv().CalculatedTime
 return getgenv().remainingmin
 return getgenv().remainingsec
