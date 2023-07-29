@@ -1,6 +1,5 @@
 -- Get the strategy completion time in seconds (lobbyrejointimer)
-local timer = getgenv().lobbyrejointimer
-local PlaceID = game.PlaceId
+local timer = getgenv().timer
 local delay = timer + getgenv().delaytimer
 
 -- Get the current time
