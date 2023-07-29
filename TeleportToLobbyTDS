@@ -1,36 +1,17 @@
---Note: do not write additional time, the script did it for you
---Note 2: script put in AutoExec
-local timer = 780 -- Strategy completion time in seconds ( https://www.google.com/search?q=min+to+sec )
---variables (do not touch)
 local PlaceID = game.PlaceId
-local delay15sec = timer + 15 --additional 15 sec delay
---local Min_To_Sec = timer * 60
-local Sec_To_Min = delay15sec / 60
---anti afk
-local VU = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   VU:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(0.1)
-   VU:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
---back to lobby
-if PlaceID == 5591597781 then
-print("Script Loaded")
-wait(0.5) --can be changed to 0.5
-print("Teleport to the lobby after " .. Sec_To_Min .. " minutes")
-    wait(delay15sec)
-    warn("Teleport to the lobby")
-        getgenv().output('Teleport to the lobby',Color3.fromRGB(212, 255, 0)) --can be deleted
-    wait(0.1)
-game:GetService("TeleportService"):Teleport(3260590327, LocalPlayer)
---auto lobby rejoin
-elseif PlaceID == 3260590327 then
 print("Script Loaded")
 wait(0.5)
-print("Automatic reconnection after 10 minutes")
-    wait(600) --10 min wait in lobby
-    warn("Lobby rejoin")
-    wait(0.1)
-game:GetService("TeleportService"):Teleport(3260590327, LocalPlayer)
+local VU = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   VU:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+   wait(0.1)
+   VU:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
+if PlaceID == 5591597781 then
+    wait(getgenv().lobbyteleportdelaytime)
+    game:GetService("TeleportService"):Teleport(3260590327, game.Players.LocalPlayer)
+elseif PlaceID == 3260590327 then
+    print("Automatic reconnection after 10 minutes")
+    wait(getgenv().lobbyrejoindelaytime)
+    game:GetService("TeleportService"):Teleport(3260590327, game.Players.LocalPlayer)
 end
---🇺🇦
