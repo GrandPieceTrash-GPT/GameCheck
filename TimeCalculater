@@ -1,4 +1,4 @@
--- Get the strategy completion time in seconds (lobbyrejointimer)
+-- Get the strategy completion time in seconds (timer)
 local timer = getgenv().timer
 local delay = timer + getgenv().delaytimer
 
