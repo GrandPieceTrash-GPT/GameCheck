@@ -43,5 +43,6 @@ CalculatedTimeResult = {
 getgenv().CalculatedTime,
 getgenv().remainingmin,
 getgenv().remainingsec,
+getgenv().delay,
 }
 return CalculatedTimeResult
