@@ -1,6 +1,6 @@
 --Note: do not write additional time, the script did it for you
 --Note 2: script put in AutoExec
-local timer = 815 -- Strategy completion time in seconds ( https://www.google.com/search?q=min+to+sec )
+local timer = 840 -- Strategy completion time in seconds ( https://www.google.com/search?q=min+to+sec )
 --variables (do not touch)
 local PlaceID = game.PlaceId
 local delay15sec = timer + 15 --additional 15 sec delay
