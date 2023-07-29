@@ -1,13 +1,13 @@
 -- Get the strategy completion time in seconds (timer)
 local timer = getgenv().timer
-local delay = timer + getgenv().delaytimer
+local getgenv().delay = timer + getgenv().delaytimer
 
 -- Get the current time
 local PlayerTime = os.date("*t", os.time())
 
 -- Calculate remaining minutes and seconds from the delay
-getgenv().remainingmin = math.floor(delay / 60) -- Calculate remaining minutes
-getgenv().remainingsec = delay % 60 -- Calculate remaining seconds
+getgenv().remainingmin = math.floor(getgenv().delay / 60) -- Calculate remaining minutes
+getgenv().remainingsec = getgenv().delay % 60 -- Calculate remaining seconds
 
 -- Anti AFK function
 local VU = game:GetService("VirtualUser")
