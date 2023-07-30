@@ -1,12 +1,6 @@
 local PlaceID = game.PlaceId
 print("Script Loaded")
 wait(0.5)
-local VU = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   VU:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-   wait(0.1)
-   VU:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-end)
 if PlaceID == 5591597781 then
     print("AHHHHH")
     wait(getgenv().lobbyteleportdelaytime)
